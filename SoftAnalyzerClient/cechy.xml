@@ -9,7 +9,8 @@
   <cecha waga="1" nazwa="RozmiaryPlikowKodowZrodlowychProperty"/>
   <cecha waga="1" nazwa="JezykProgramowaniaProperty"/>
   <cecha waga="1" nazwa="LiczbaZnakowProperty"/>
-  <cecha waga="1" nazwa="ListaNazwPlikowIKatalogow"/>
+  <cecha waga="1" nazwa="ListaNazwPlikowProperty"/>
+  <cecha waga="1" nazwa="ListaNazwKatalogowProperty"/>
   <cecha waga="1" nazwa="LiczbaPlikowODanymRozszerzeniuProperty"/>
   <cecha waga="1" nazwa="LiczbaPlikowDanegoTypuProperty"/>
   <cecha waga="1" nazwa="MozliwoscWczytywaniaPlikowProperty"/>
