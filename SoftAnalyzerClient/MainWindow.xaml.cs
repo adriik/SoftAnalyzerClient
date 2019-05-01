@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+using System.Windows.Threading;
 using System.Xml;
 
 namespace SoftAnalyzerClient
@@ -22,6 +14,10 @@ namespace SoftAnalyzerClient
     public partial class MainWindow : Window
     {
         public static KontenerCech cechy;
+        Podmiot podmiot1;
+        Podmiot podmiot2;
+        Szczegoly szczegoly;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -31,29 +27,56 @@ namespace SoftAnalyzerClient
             cechy = new KontenerCech();
             foreach (XmlNode item in elemList)
             {
-                cechy.DodajCeche(item.Attributes["nazwa"].Value, Int32.Parse(item.Attributes["waga"].Value));
+                cechy.DodajCeche(item.Attributes["nazwa"].Value, Int32.Parse(item.Attributes["waga"].Value), item.Attributes["typ"].Value);
             }
 
             link2.Text = "https://github.com/UniversalMediaServer/UniversalMediaServer/archive/clean_up_the_code.zip";
             link1.Text = "https://github.com/UniversalMediaServer/UniversalMediaServer/archive/8.0.0.zip";
+
         }
 
-        private void Button_Porownaj_Click(object sender, RoutedEventArgs e)
+        private async void Button_Porownaj_Click(object sender, RoutedEventArgs e)
         {
-            
-            ServiceReference1.ServiceSAClient soap = new ServiceReference1.ServiceSAClient();
-            //soap.przeslijPlik("https://github.com/adriik/InteligentnyDom/archive/master.zip");
-            
-            
-            String NazwaProjekt1 = link1.Text.Split('/').Last();
-            String NazwaProjekt2 = link2.Text.Split('/').Last();
+            podmiot1 = null;
+            podmiot2 = null;
 
-            Podmiot podmiot1 = new Podmiot(soap, link1.Text);
-            Podmiot podmiot2 = new Podmiot(soap, link2.Text);
+            if(szczegoly != null)
+            {
+                szczegoly.Close();
+            }
+
+            SzczegolyButton.IsEnabled = false;
+            SzczegolySpinner.Visibility = Visibility.Visible;
+            SzczegolyTextBlock.Visibility = Visibility.Collapsed;
+            SzczegolyInfo.Visibility = Visibility.Collapsed;
+
+            PorownajSpinner.Visibility = Visibility.Visible;
+            PorownajTextBlock.Visibility = Visibility.Collapsed;
+            PorownajClone.Visibility = Visibility.Collapsed;
+            PorownajButton.IsEnabled = false;
+            await Task.Run(() => PobranieIPrzeliczenieCech());
+            
+        }
+
+        private void PobranieIPrzeliczenieCech()
+        {
+            ServiceReference1.ServiceSAClient soap = new ServiceReference1.ServiceSAClient();
+
+            string NazwaProjekt1;
+            string NazwaProjekt2;
+            string link1Text = "";
+            string link2Text = "";
+
+            System.Windows.Application.Current.Dispatcher.Invoke( DispatcherPriority.Normal, (ThreadStart)delegate {
+                NazwaProjekt1 = link1.Text.Split('/').Last();
+                NazwaProjekt2 = link2.Text.Split('/').Last();
+                link1Text = link1.Text;
+                link2Text = link2.Text;
+            });
+            podmiot1 = new Podmiot(soap, link1Text);
+            podmiot2 = new Podmiot(soap, link2Text);
 
             cechy.WyliczPodobienstwaCech(ref podmiot1, ref podmiot2);
-
-            
 
             float suma = 0.0f;
 
@@ -66,49 +89,28 @@ namespace SoftAnalyzerClient
 
             Console.WriteLine("Podobieństwo projektów: " + podobienstwo);
 
-            labelPodobienstwo.Content = "Podobieństwo projektów: " + podobienstwo;
-                // 1 PROJEKT ---------------------------------------------------------------------------------------------------------------------------
-                //soap.przeslijPlik(link1.Text);
-                //podmiot1.SkrotyPlikowProperty = new LinkedList<ServiceReference1.hashePlikow>(soap.getSkrotyPlikow(NazwaProjekt1));
-                //podmiot1.LiczbaPlikowProperty = soap.getLiczbaPlikow(NazwaProjekt1);
-                //podmiot1.LiczbaMetodProperty = soap.getLiczbaMetod(NazwaProjekt1);
+            System.Windows.Application.Current.Dispatcher.Invoke(DispatcherPriority.Normal, (ThreadStart)delegate
+            {
+                labelPodobienstwo.Content = "Podobieństwo systemów: " + Math.Round(podobienstwo, 2);
+                PorownajButton.IsEnabled = true;
+                SzczegolyButton.IsEnabled = true;
 
-                // -------------------------------------------------------------------------------------------------------------------------------------
+                SzczegolySpinner.Visibility = Visibility.Collapsed;
+                SzczegolyTextBlock.Visibility = Visibility.Visible;
+                SzczegolyInfo.Visibility = Visibility.Visible;
 
+                PorownajSpinner.Visibility = Visibility.Collapsed;
+                PorownajTextBlock.Visibility = Visibility.Visible;
+                PorownajClone.Visibility = Visibility.Visible;
+            });
 
-                // 2 PROJEKT ---------------------------------------------------------------------------------------------------------------------------
-                //soap.przeslijPlik(link2.Text);
-                //podmiot2.SkrotyPlikowProperty = new LinkedList<ServiceReference1.hashePlikow>(soap.getSkrotyPlikow(NazwaProjekt2));
-                //podmiot2.LiczbaPlikowProperty = soap.getLiczbaPlikow(NazwaProjekt2);
-                // -------------------------------------------------------------------------------------------------------------------------------------
-
-                //LinkedList<ServiceReference1.hashePlikow> wykrytePliki = new LinkedList<ServiceReference1.hashePlikow>();
-
-                //foreach (var item in podmiot1.SkrotyPlikowProperty)
-                //{
-                //    foreach (var item2 in podmiot2.SkrotyPlikowProperty)
-                //    {
-                //        if (item.hash.Equals(item2.hash))
-                //        {
-                //            wykrytePliki.AddLast(item);
-                //        }
-                //    }
-                //}
-
-                //Console.WriteLine("Te same pliki: ");
-                //foreach (var item in wykrytePliki)
-                //{
-                //    Console.WriteLine(item.nazwa);
-                //}
-
-                //Console.WriteLine("\n\nPodobieństwo: ");
-                //cechy.SetPodobienstwo("SkrotyPlikowProperty", (float)wykrytePliki.Count / (float)podmiot1.LiczbaPlikowProperty);
-                //Console.WriteLine((float)wykrytePliki.Count / (float)podmiot1.LiczbaPlikowProperty);
+            System.Media.SoundPlayer player = new System.Media.SoundPlayer("alert.wav");
+            player.Play();
         }
 
         private void Button_Click_Szczegoly(object sender, RoutedEventArgs e)
         {
-            Szczegoly szczegoly = new Szczegoly();
+            szczegoly = new Szczegoly();
             szczegoly.Show();
         }
     }

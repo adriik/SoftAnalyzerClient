@@ -1,18 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Data;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SoftAnalyzerClient
 {
@@ -22,6 +13,7 @@ namespace SoftAnalyzerClient
     public partial class Szczegoly : Window
     {
         private Cecha cecha;
+
         public Szczegoly()
         {
             InitializeComponent();
@@ -29,7 +21,10 @@ namespace SoftAnalyzerClient
             if (MainWindow.cechy.listaCech != null)
             {
                 var lista = new ObservableCollection<Cecha>(MainWindow.cechy.listaCech);
-                dataGrid1.ItemsSource = lista;
+
+                ListCollectionView collectionView = new ListCollectionView(lista);
+                collectionView.GroupDescriptions.Add(new PropertyGroupDescription("typ"));
+                dataGrid1.ItemsSource = collectionView;
 
             }
 
@@ -37,23 +32,46 @@ namespace SoftAnalyzerClient
 
         private void DataGrid1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+
             if (cecha != null)
             {
-                gridziok.Children.Remove(cecha.szczegoloweDane);
+                szczegolyGrid.Children.Remove(cecha.szczegoloweDane);
             }
-
             DataGrid gd = (DataGrid)sender;
+            
             cecha = gd.SelectedItem as Cecha;
 
-            cecha.szczegoloweDane.SetValue(Grid.ColumnProperty, 1);
-            cecha.szczegoloweDane.IsReadOnly = true;
-            cecha.szczegoloweDane.AutoGenerateColumns = false;
-            cecha.szczegoloweDane.HorizontalAlignment = HorizontalAlignment.Left;
-            cecha.szczegoloweDane.VerticalAlignment = VerticalAlignment.Top;
-            gridziok.Children.Add(cecha.szczegoloweDane);
+            if (cecha.szczegoloweDane != null)
+            {
+                cecha.szczegoloweDane.SetValue(Grid.ColumnProperty, 1);
+                cecha.szczegoloweDane.SetValue(Grid.RowProperty, 1);
+                Thickness margin = new Thickness();
+                margin.Left = 20;
+                margin.Right = 20;
+                margin.Top = 20;
+                margin.Bottom = 20;
+                cecha.szczegoloweDane.Margin = margin;
+                cecha.szczegoloweDane.IsReadOnly = true;
+                cecha.szczegoloweDane.AutoGenerateColumns = false;
+                cecha.szczegoloweDane.VerticalAlignment = VerticalAlignment.Top;
+                cecha.szczegoloweDane.HorizontalAlignment = HorizontalAlignment.Stretch;
+                cecha.szczegoloweDane.HorizontalContentAlignment = HorizontalAlignment.Stretch;
 
-            Console.WriteLine("Byłem " + cecha.nazwa);
-            
+                cecha.szczegoloweDane.Columns.ToList().ForEach(n => n.Width = new DataGridLength(1, DataGridLengthUnitType.Star));
+
+                cecha.szczegoloweDane.Height = Double.NaN;
+
+                if (etykietaPodglad.Visibility == Visibility.Hidden)
+                {
+                    ColumnDefinition gridCol2 = new ColumnDefinition();
+                    szczegolyGrid.ColumnDefinitions.Add(gridCol2);
+                    etykietaPodglad.Visibility = Visibility.Visible;
+                    szczegolyWindow.Width = 1000;
+                    szczegolyWindow.Height = 600;
+                }
+
+                szczegolyGrid.Children.Add(cecha.szczegoloweDane);
+            }
         }
 
     }

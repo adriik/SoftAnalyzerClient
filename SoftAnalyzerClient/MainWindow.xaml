@@ -3,9 +3,11 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:fa="http://schemas.fontawesome.io/icons/"
         xmlns:local="clr-namespace:SoftAnalyzerClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Icon="logo.png"
+        Title="SoftAnalyzer Client - Porównywanie systemów" Height="250" Width="1000" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
@@ -19,11 +21,13 @@
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
-                <RowDefinition Height="40" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="20" />
             </Grid.RowDefinitions>
-
-            <TextBox x:Name="link1" Grid.Column="0" Margin="10,10,10,10" Text="Projekt 1"></TextBox>
-            <TextBox x:Name="link2" Grid.Column="1" Margin="10,10,10,10" Text=""></TextBox>
+            <Label FontWeight="SemiBold" Grid.Row="0" Grid.Column="0" Margin="10,10,10,0">Adres plików źródłowych 1 systemu:</Label>
+            <Label FontWeight="SemiBold" Grid.Row="0" Grid.Column="1" Margin="10,10,10,0">Adres plików źródłowych 2 systemu:</Label>
+            <TextBox x:Name="link1" Grid.Row="1" Grid.Column="0" Margin="10,0,10,0" Text="Projekt 1"></TextBox>
+            <TextBox x:Name="link2" Grid.Row="1" Grid.Column="1" Margin="10,0,10,0" Text=""></TextBox>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -33,15 +37,28 @@
                 <RowDefinition Height="100" />
             </Grid.RowDefinitions>
 
-            <Button Width="200" Height="50" Click="Button_Porownaj_Click">Porównaj</Button>
+            <Button x:Name="PorownajButton" Width="200" Height="50" Click="Button_Porownaj_Click">
+                <StackPanel>
+                    <fa:ImageAwesome Icon="Spinner" Width="20" Height="20" Spin="True" Name="PorownajSpinner" Visibility="Collapsed" />
+                    <fa:ImageAwesome Icon="Clone" Width="20" Height="20" Name="PorownajClone" Visibility="Visible" />
+                    <TextBlock x:Name="PorownajTextBlock">Porównaj</TextBlock>
+                </StackPanel>
+            </Button>
         </Grid>
         <Grid Grid.Row="2">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Label HorizontalAlignment="Center" Name="labelPodobienstwo" Grid.Column="0">Podobieństwo: </Label>
-            <Button Click="Button_Click_Szczegoly" Grid.Column="1">Szczegóły</Button>
+            <Label Margin="20,0,20,0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Name="labelPodobienstwo" Grid.Column="0">Podobieństwo projektów: </Label>
+            <Button x:Name="SzczegolyButton" Margin="20,0,20,0" Click="Button_Click_Szczegoly" Grid.Column="1">
+                <StackPanel Orientation="Horizontal">
+                    <fa:ImageAwesome Icon="Spinner" Width="20" Height="20" Spin="True" Name="SzczegolySpinner" Visibility="Collapsed" />
+                    <TextBlock Margin="0,0,5,0" x:Name="SzczegolyTextBlock">Szczegóły</TextBlock>
+                    <fa:ImageAwesome Margin="5,0,0,0" Icon="InfoCircle" Width="20" Height="20" Name="SzczegolyInfo" Visibility="Visible" />
+                </StackPanel>
+            </Button>
         </Grid>
+        <Label Content="Label" HorizontalAlignment="Left" Margin="632,-193,0,0" VerticalAlignment="Top"/>
     </Grid>
 </Window>

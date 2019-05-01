@@ -1,28 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <cechy>
-  <cecha waga="1" nazwa="LiczbaAtrybutowProperty"/>
-  <cecha waga="1" nazwa="LiczbaMetodProperty"/>
-  <cecha waga="1" nazwa="LiczbaAtrybutowWKlasach"/>
-  <cecha waga="1" nazwa="ZbiorBibliotekProperty"/>
-  <cecha waga="1" nazwa="LiczbaPlikowProperty"/>
-  <cecha waga="1" nazwa="LiczbaLiniiKoduProperty"/>
-  <cecha waga="1" nazwa="RozmiaryPlikowKodowZrodlowychProperty"/>
-  <cecha waga="1" nazwa="JezykProgramowaniaProperty"/>
-  <cecha waga="1" nazwa="LiczbaZnakowProperty"/>
-  <cecha waga="1" nazwa="ListaNazwPlikowProperty"/>
-  <cecha waga="1" nazwa="ListaNazwKatalogowProperty"/>
-  <cecha waga="1" nazwa="LiczbaPlikowODanymRozszerzeniuProperty"/>
-  <cecha waga="1" nazwa="LiczbaPlikowDanegoTypuProperty"/>
-  <cecha waga="1" nazwa="MozliwoscWczytywaniaPlikowProperty"/>
-  <cecha waga="1" nazwa="LiczbaDanychWejsciowychProperty"/>
-  <cecha waga="1" nazwa="JezykInterfejsuProperty"/>
-  <cecha waga="1" nazwa="LiczbaZmiennychDanegoTypuProperty"/>
-  <cecha waga="1" nazwa="SkrotyPlikowProperty"/>
-  <cecha waga="1" nazwa="ParadygmatProperty"/>
-  <cecha waga="1" nazwa="MechanizmWielowatkowosciProperty"/>
+  <cecha waga="1" nazwa="LiczbaAtrybutowProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaMetodProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaAtrybutowWKlasach" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="ZbiorBibliotekProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaPlikowProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="LiczbaLiniiKoduProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="RozmiaryPlikowKodowZrodlowychProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="JezykProgramowaniaProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaZnakowProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="ListaNazwPlikowProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="ListaNazwKatalogowProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="LiczbaPlikowODanymRozszerzeniuProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="LiczbaPlikowDanegoTypuProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="MozliwoscWczytywaniaPlikowProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaDanychWejsciowychProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="JezykInterfejsuProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="LiczbaZmiennychDanegoTypuProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="SkrotyPlikowProperty" typ="Cechy struktury"/>
+  <cecha waga="1" nazwa="ParadygmatProperty" typ="Cechy kodu"/>
+  <cecha waga="1" nazwa="MechanizmWielowatkowosciProperty" typ="Cechy kodu"/>
 </cechy>
-
-
-
-
-

@@ -9,10 +9,13 @@ namespace SoftAnalyzerClient
         public float podobienstwo { get; set; }
         public DataGrid szczegoloweDane { get; set; }
 
-        public Cecha(string nazwa, int waga)
+        public string typ { get; set; }
+
+        public Cecha(string nazwa, int waga, string typ)
         {
             this.nazwa = nazwa;
             this.waga = waga;
+            this.typ = typ;
         }
     }
 }
