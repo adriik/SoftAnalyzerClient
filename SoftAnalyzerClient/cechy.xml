@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <cechy>
-  <cecha waga="1" nazwa="LiczbaAtrybutowProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaMetodProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaAtrybutowWKlasach" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="ZbiorBibliotekProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaPlikowProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="LiczbaLiniiKoduProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="RozmiaryPlikowKodowZrodlowychProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="JezykProgramowaniaProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaZnakowProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="ListaNazwPlikowProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="ListaNazwKatalogowProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="LiczbaPlikowODanymRozszerzeniuProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="LiczbaPlikowDanegoTypuProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="MozliwoscWczytywaniaPlikowProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaDanychWejsciowychProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="JezykInterfejsuProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="LiczbaZmiennychDanegoTypuProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="SkrotyPlikowProperty" typ="Cechy struktury"/>
-  <cecha waga="1" nazwa="ParadygmatProperty" typ="Cechy kodu"/>
-  <cecha waga="1" nazwa="MechanizmWielowatkowosciProperty" typ="Cechy kodu"/>
+  <cecha waga="60" identyfikator="LiczbaAtrybutowProperty" nazwa="Liczba zmiennych" typ="Cecha kodu"/>
+  <cecha waga="60" identyfikator="LiczbaMetodProperty" nazwa="Liczba metod" typ="Cecha kodu"/>
+  <cecha waga="70" identyfikator="LiczbaAtrybutowWKlasach" nazwa="Liczba zmiennych w plikach" typ="Cecha kodu"/>
+  <cecha waga="70" identyfikator="ZbiorBibliotekProperty" nazwa="Zbiór bibliotek" typ="Cecha kodu"/>
+  <cecha waga="40" identyfikator="LiczbaPlikowProperty" nazwa="Liczba plików" typ="Cecha struktury"/>
+  <cecha waga="50" identyfikator="LiczbaLiniiKoduProperty" nazwa="Liczba linii kodu w plikach" typ="Cecha kodu"/>
+  <cecha waga="80" identyfikator="RozmiaryPlikowKodowZrodlowychProperty" nazwa="Rozmiar konkretnych plików" typ="Cecha struktury"/>
+  <cecha waga="70" identyfikator="JezykProgramowaniaProperty" nazwa="Język programowania" typ="Cecha kodu"/>
+  <cecha waga="30" identyfikator="LiczbaZnakowProperty" nazwa="Liczba znaków" typ="Cecha kodu"/>
+  <cecha waga="35" identyfikator="ListaNazwPlikowProperty" nazwa="Lista nazw plików" typ="Cecha struktury"/>
+  <cecha waga="35" identyfikator="ListaNazwKatalogowProperty" nazwa="Lista nazw katalogów" typ="Cecha struktury"/>
+  <cecha waga="45" identyfikator="LiczbaPlikowODanymRozszerzeniuProperty" nazwa="Liczba plików o danym rozszerzeniu" typ="Cecha struktury"/>
+  <cecha waga="40" identyfikator="LiczbaPlikowDanegoTypuProperty" nazwa="Liczba plików konkretnego typu" typ="Cecha struktury"/>
+  <cecha waga="50" identyfikator="MozliwoscWczytywaniaPlikowProperty" nazwa="Możliwość wczytywania plików" typ="Cecha kodu"/>
+  <cecha waga="50" identyfikator="LiczbaDanychWejsciowychProperty" nazwa="Liczba danych wejściowych" typ="Cecha kodu"/>
+  <cecha waga="50" identyfikator="JezykInterfejsuProperty" nazwa="Lokalizacja interfejsu" typ="Cecha kodu"/>
+  <cecha waga="40" identyfikator="LiczbaZmiennychDanegoTypuProperty" nazwa="Liczba zmiennych danego typu" typ="Cecha kodu"/>
+  <cecha waga="100" identyfikator="SkrotyPlikowProperty" nazwa="Skróty plików" typ="Cecha struktury"/>
+  <cecha waga="70" identyfikator="ParadygmatProperty" nazwa="Paradygmat" typ="Cecha kodu"/>
+  <cecha waga="80" identyfikator="MechanizmWielowatkowosciProperty" nazwa="Mechanizm wielowątkowości" typ="Cecha kodu"/>
 </cechy>

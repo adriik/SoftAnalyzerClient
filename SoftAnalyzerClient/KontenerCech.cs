@@ -45,16 +45,16 @@ namespace SoftAnalyzerClient
             SetRozmiaryPlikowKodowZrodlowychProperty();
         }
 
-        public void DodajCeche(String nazwa, int waga, string typ)
+        public void DodajCeche(String identyfikator, int waga, string typ, string nazwa)
         {
-            listaCech.AddLast(new Cecha(nazwa, waga, typ));
+            listaCech.AddLast(new Cecha(identyfikator, waga, typ, nazwa));
         }
 
-        private Cecha GetCecha(String nazwa)
+        private Cecha GetCecha(String identyfikator)
         {
             foreach (var item in listaCech)
             {
-                if (item.nazwa.Equals(nazwa))
+                if (item.identyfikator.Equals(identyfikator))
                 {
                     return item;
                 }
@@ -62,11 +62,11 @@ namespace SoftAnalyzerClient
             return null;
         }
 
-        public int GetWaga(String nazwa)
+        public int GetWaga(String identyfikator)
         {
             foreach (var item in listaCech)
             {
-                if (item.nazwa.Equals(nazwa))
+                if (item.identyfikator.Equals(identyfikator))
                 {
                     return item.waga;
                 }
@@ -74,11 +74,11 @@ namespace SoftAnalyzerClient
             return 0;
         }
 
-        public void SetPodobienstwo(string nazwa, float wartosc)
+        public void SetPodobienstwo(string identyfikator, float wartosc)
         {
             foreach (var item in listaCech)
             {
-                if (item.nazwa.Equals(nazwa))
+                if (item.identyfikator.Equals(identyfikator))
                 {
                     //if (wartosc > 1.0f)
                     //{
@@ -93,11 +93,11 @@ namespace SoftAnalyzerClient
             }
         }
 
-        public float GetPodobienstwo(string nazwa)
+        public float GetPodobienstwo(string identyfikator)
         {
             foreach (var item in listaCech)
             {
-                if (item.nazwa.Equals(nazwa))
+                if (item.identyfikator.Equals(identyfikator))
                 {
                     return item.podobienstwo;
                 }
@@ -105,11 +105,11 @@ namespace SoftAnalyzerClient
             return 0;
         }
 
-        public void SetSzczegoloweDane(string nazwa, DataGrid dg)
+        public void SetSzczegoloweDane(string identyfikator, DataGrid dg)
         {
             foreach (var item in listaCech)
             {
-                if (item.nazwa.Equals(nazwa))
+                if (item.identyfikator.Equals(identyfikator))
                 {
                     item.szczegoloweDane = dg;
                 }
@@ -119,7 +119,7 @@ namespace SoftAnalyzerClient
         private void SetLiczbaAtrybutowProperty()
         {
             //SetPodobienstwo("LiczbaAtrybutowProperty", (podmiot1.LiczbaAtrybutowProperty.Equals(podmiot2.LiczbaAtrybutowProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaAtrybutowProperty", (float)Math.Min(podmiot1.LiczbaAtrybutowProperty, podmiot2.LiczbaAtrybutowProperty) / (float)Math.Max(podmiot1.LiczbaAtrybutowProperty, podmiot2.LiczbaAtrybutowProperty));
+            SetPodobienstwo("LiczbaAtrybutowProperty", PodobienstwoXtoX(podmiot1.LiczbaAtrybutowProperty, podmiot2.LiczbaAtrybutowProperty));
 
             Tabela3x2("LiczbaAtrybutowProperty", "Liczba atrybutów", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
 
@@ -128,7 +128,7 @@ namespace SoftAnalyzerClient
         private void SetLiczbaMetodProperty()
         {
             //SetPodobienstwo("LiczbaMetodProperty", (podmiot1.LiczbaMetodProperty.Equals(podmiot2.LiczbaMetodProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaMetodProperty", (float)Math.Min(podmiot1.LiczbaMetodProperty, podmiot2.LiczbaMetodProperty) / (float)Math.Max(podmiot1.LiczbaMetodProperty, podmiot2.LiczbaMetodProperty));
+            SetPodobienstwo("LiczbaMetodProperty", PodobienstwoXtoX(podmiot1.LiczbaMetodProperty, podmiot2.LiczbaMetodProperty));
 
             Tabela3x2("LiczbaMetodProperty", "Liczba Metod", podmiot1.LiczbaMetodProperty.ToString(), podmiot2.LiczbaMetodProperty.ToString());
         }
@@ -144,15 +144,8 @@ namespace SoftAnalyzerClient
                     if (item.nazwa.Equals(item2.nazwa))
                     {
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.liczba.ToString(), wartosc2 = item2.liczba.ToString()});
-
-                        if (item.liczba != 0 && item2.liczba != 0)
-                        {
-                            liczbaWykryc += Math.Min(item.liczba, item2.liczba) / Math.Max(item.liczba, item2.liczba);
-                        }
-                        else if(item.liczba == 0 && item2.liczba == 0)
-                        {
-                            liczbaWykryc += 1.0f;
-                        }
+                        liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
+                        // TODO: jeszcze jeden else powinien byc
                     }
                 }
             }
@@ -190,7 +183,7 @@ namespace SoftAnalyzerClient
         private void SetLiczbaPlikowProperty()
         {
             //SetPodobienstwo("LiczbaPlikowProperty", (podmiot1.LiczbaPlikowProperty.Equals(podmiot2.LiczbaPlikowProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaPlikowProperty", (float)Math.Min(podmiot1.LiczbaPlikowProperty, podmiot2.LiczbaPlikowProperty) / (float)Math.Max(podmiot1.LiczbaPlikowProperty, podmiot2.LiczbaPlikowProperty));
+            SetPodobienstwo("LiczbaPlikowProperty", PodobienstwoXtoX(podmiot1.LiczbaPlikowProperty, podmiot2.LiczbaPlikowProperty));
 
             Tabela3x2("LiczbaPlikowProperty", "Liczba plików", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
         }
@@ -206,15 +199,9 @@ namespace SoftAnalyzerClient
                     if (item.nazwa.Equals(item2.nazwa))
                     {
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.liczbaLinii.ToString(), wartosc2 = item2.liczbaLinii.ToString() });
+                        liczbaWykryc += PodobienstwoXtoX(item.liczbaLinii, item2.liczbaLinii);
+                        // TODO: jeszcze jeden else powinien byc
 
-                        if (item.liczbaLinii != 0 && item2.liczbaLinii != 0)
-                        {
-                            liczbaWykryc += (float)Math.Min(item.liczbaLinii, item2.liczbaLinii) / (float)Math.Max(item.liczbaLinii, item2.liczbaLinii);
-                        }
-                        else if (item.liczbaLinii == 0 && item2.liczbaLinii == 0)
-                        {
-                            liczbaWykryc += 1.0f;
-                        }
                     }
                 }
             }
@@ -239,15 +226,9 @@ namespace SoftAnalyzerClient
                     {
                         
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.rozmiar.ToString(), wartosc2 = item2.rozmiar.ToString() });
+                        liczbaWykryc += PodobienstwoXtoX(item.rozmiar, item2.rozmiar);
+                        // TODO: jeszcze jeden else powinien byc
 
-                        if (item.rozmiar != 0 && item2.rozmiar != 0)
-                        {
-                            liczbaWykryc += (float)Math.Min(item.rozmiar, item2.rozmiar) / (float)Math.Max(item.rozmiar, item2.rozmiar);
-                        }
-                        else if (item.rozmiar == 0 && item2.rozmiar == 0)
-                        {
-                            liczbaWykryc += 1.0f;
-                        }
                     }
                 }
             }
@@ -269,7 +250,7 @@ namespace SoftAnalyzerClient
         private void SetLiczbaZnakowProperty()
         {
             //SetPodobienstwo("LiczbaZnakowProperty", podmiot1.LiczbaZnakowProperty.Equals(podmiot2.LiczbaZnakowProperty) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaZnakowProperty", (float)Math.Min(podmiot1.LiczbaZnakowProperty, podmiot2.LiczbaZnakowProperty) / (float)Math.Max(podmiot1.LiczbaZnakowProperty, podmiot2.LiczbaZnakowProperty));
+            SetPodobienstwo("LiczbaZnakowProperty", PodobienstwoXtoX(podmiot1.LiczbaZnakowProperty, podmiot2.LiczbaZnakowProperty));
             Tabela3x2("LiczbaZnakowProperty","Liczba znaków", podmiot1.LiczbaZnakowProperty.ToString(), podmiot2.LiczbaZnakowProperty.ToString());
         }
 
@@ -309,6 +290,8 @@ namespace SoftAnalyzerClient
             Tabela1xM("ListaNazwKatalogowProperty", "Wykryte katalogi", wykryte);
         }
 
+
+        // TODO: prawdopodobnie czesc wspolna powinna byc zamiast count1 + count2
         private void SetLiczbaPlikowODanymRozszerzeniuProperty()
         {
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
@@ -342,14 +325,9 @@ namespace SoftAnalyzerClient
                     {
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.typ, wartosc1 = item.liczba.ToString(), wartosc2 = item2.liczba.ToString() });
 
-                        if (item.liczba != 0 && item2.liczba != 0)
-                        {
-                            liczbaWykryc += (float)Math.Min(item.liczba, item2.liczba) / (float)Math.Max(item.liczba, item2.liczba);
-                        }
-                        else if (item.liczba == 0 && item2.liczba == 0)
-                        {
-                            liczbaWykryc += 1.0f;
-                        }
+                        liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
+                        // TODO: jeszcze jeden else powinien byc
+
                     }
                 }
             }
@@ -370,7 +348,7 @@ namespace SoftAnalyzerClient
         private void SetLiczbaDanychWejsciowychProperty()
         {
             //SetPodobienstwo("LiczbaDanychWejsciowychProperty", (podmiot1.LiczbaDanychWejsciowychProperty.Equals(podmiot2.LiczbaDanychWejsciowychProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaDanychWejsciowychProperty", (float)Math.Min(podmiot1.LiczbaDanychWejsciowychProperty, podmiot2.LiczbaDanychWejsciowychProperty) / (float)Math.Max(podmiot1.LiczbaDanychWejsciowychProperty, podmiot2.LiczbaDanychWejsciowychProperty));
+            SetPodobienstwo("LiczbaDanychWejsciowychProperty", PodobienstwoXtoX(podmiot1.LiczbaDanychWejsciowychProperty, podmiot2.LiczbaDanychWejsciowychProperty));
             Tabela3x2("LiczbaDanychWejsciowychProperty","Liczba użytych mechanizmów wczytujących dane", podmiot1.LiczbaDanychWejsciowychProperty.ToString(), podmiot2.LiczbaDanychWejsciowychProperty.ToString());
         }
 
@@ -392,14 +370,9 @@ namespace SoftAnalyzerClient
                     {
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.typ, wartosc1 = item.liczba.ToString(), wartosc2 = item2.liczba.ToString() });
 
-                        if (item.liczba != 0 && item2.liczba != 0)
-                        {
-                            liczbaWykryc += (float)Math.Min(item.liczba, item2.liczba) / (float)Math.Max(item.liczba, item2.liczba);
-                        }
-                        else if (item.liczba == 0 && item2.liczba == 0)
-                        {
-                            liczbaWykryc += 1.0f;
-                        }
+                        liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
+                        // TODO: jeszcze jeden else powinien byc
+
                     }
                 }
             }
@@ -527,6 +500,23 @@ namespace SoftAnalyzerClient
                 dg.ItemsSource = new ObservableCollection<SzczegolowaTabela>(data);
                 SetSzczegoloweDane(nazwaProperty, dg);
             });
+        }
+
+        private float PodobienstwoXtoX(int wartosc1, int wartosc2)
+        {
+            // TODO: jeszcze jeden else powinien byc
+            if (wartosc1 != 0 && wartosc2 != 0)
+            {
+                return (float)Math.Min(wartosc1, wartosc2) / (float)Math.Max(wartosc1, wartosc2);
+            }
+            else if (wartosc1 == 0 && wartosc2 == 0)
+            {
+                return 1.0f;
+            }else 
+            {
+                return 0.0f;
+            }
+            
         }
     }
 }

@@ -7,9 +7,11 @@
         xmlns:local="clr-namespace:SoftAnalyzerClient"
         mc:Ignorable="d"
         Icon="logo.png"
+        Name="glowneOkno"
         Title="SoftAnalyzer Client - Porównywanie systemów" Height="250" Width="1000" ResizeMode="NoResize">
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
@@ -46,12 +48,15 @@
             </Button>
         </Grid>
         <Grid Grid.Row="2">
+            <ComboBox Margin="20,20,20,20" Name="ComboBoxHistoria" Visibility="Collapsed" SelectionChanged="ComboBoxHistoria_SelectionChanged" ></ComboBox>
+        </Grid>
+        <Grid Grid.Row="3">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="1*" />
                 <ColumnDefinition Width="1*" />
             </Grid.ColumnDefinitions>
-            <Label Margin="20,0,20,0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Name="labelPodobienstwo" Grid.Column="0">Podobieństwo projektów: </Label>
-            <Button x:Name="SzczegolyButton" Margin="20,0,20,0" Click="Button_Click_Szczegoly" Grid.Column="1">
+            <Label Margin="20,0,20,0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" Name="labelPodobienstwo" Grid.Column="0">Podobieństwo ogólne: </Label>
+            <Button x:Name="SzczegolyButton" IsEnabled="false" Margin="20,0,20,0" Click="Button_Click_Szczegoly" Grid.Column="1">
                 <StackPanel Orientation="Horizontal">
                     <fa:ImageAwesome Icon="Spinner" Width="20" Height="20" Spin="True" Name="SzczegolySpinner" Visibility="Collapsed" />
                     <TextBlock Margin="0,0,5,0" x:Name="SzczegolyTextBlock">Szczegóły</TextBlock>

@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Icon="logo.png"
         Name="szczegolyWindow"
-        Title="SoftAnalyzer Client - Szczegóły porównania" Height="600" Width="500" ResizeMode="NoResize">
+        Title="SoftAnalyzer Client - Szczegóły porównania" Height="650" Width="500" ResizeMode="NoResize">
     <Grid Margin="10,10,10,10" x:Name="szczegolyGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>
@@ -15,6 +15,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="1*"/>
             <RowDefinition Height="9*"/>
+            <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15" Grid.Column="0">Szczegółowe podobieństwa poszczególnych cech</Label>
         <DataGrid AutoGenerateColumns="False" Grid.Column="0" Grid.Row="1"
@@ -55,7 +56,18 @@
                 <DataGridTextColumn Binding="{Binding Path=podobienstwo, StringFormat=F2}" MinWidth="50" Header="Podobieństwo"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Label Name="etykietaPodglad" Visibility="Hidden" Grid.Column="1" Grid.Row="0" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">Podgląd konkretnej cechy</Label>
+        <Label Name="etykietaPodglad" FontWeight="Bold" Visibility="Hidden" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="15">Podgląd konkretnej cechy</Label>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Left" Grid.Column="0">
+            <UniformGrid Columns="2">
+                <Label Width="200">Podobieństwo względem kodu:</Label>
+                <Label FontWeight="Bold" Name="LabelPodobienstwoKodu" HorizontalAlignment="Left">0.00</Label>
+            </UniformGrid>
+            <UniformGrid Columns="2">
+                <Label Width="200" >Podobieństwo względem struktury:</Label>
+                <Label FontWeight="Bold" Name="LabelPodobienstwoStruktury" HorizontalAlignment="Left">0.00</Label>
+            </UniformGrid>
+        </StackPanel>
+
 
     </Grid>
 </Window>
