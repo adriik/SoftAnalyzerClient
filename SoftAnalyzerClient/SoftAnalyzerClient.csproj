@@ -175,6 +175,15 @@
     <None Include="Connected Services\ServiceReference1\SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
+    <None Include="Connected Services\ServiceReference1\SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
+    <None Include="Connected Services\ServiceReference1\SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </None>
     <None Include="Connected Services\ServiceReference1\SoftAnalyzerClient.ServiceReference1.hashePlikow.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -228,6 +237,9 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="cechy.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="fail.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="logo.png" />

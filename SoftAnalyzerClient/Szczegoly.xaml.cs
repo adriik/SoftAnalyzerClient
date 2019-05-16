@@ -82,7 +82,7 @@ namespace SoftAnalyzerClient
                     szczegolyGrid.ColumnDefinitions.Add(gridCol2);
                     etykietaPodglad.Visibility = Visibility.Visible;
                     szczegolyWindow.Width = 1000;
-                    szczegolyWindow.Height = 650;
+                    szczegolyWindow.Height = 750;
                 }
 
                 szczegolyGrid.Children.Add(cecha.szczegoloweDane);

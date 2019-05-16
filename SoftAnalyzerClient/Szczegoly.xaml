@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Icon="logo.png"
         Name="szczegolyWindow"
-        Title="SoftAnalyzer Client - Szczegóły porównania" Height="650" Width="500" ResizeMode="NoResize">
+        Title="SoftAnalyzer Client - Szczegóły porównania" Height="750" Width="500" ResizeMode="NoResize">
     <Grid Margin="10,10,10,10" x:Name="szczegolyGrid">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="1*"/>

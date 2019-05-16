@@ -20,4 +20,7 @@
   <cecha waga="100" identyfikator="SkrotyPlikowProperty" nazwa="Skróty plików" typ="Cecha struktury"/>
   <cecha waga="70" identyfikator="ParadygmatProperty" nazwa="Paradygmat" typ="Cecha kodu"/>
   <cecha waga="80" identyfikator="MechanizmWielowatkowosciProperty" nazwa="Mechanizm wielowątkowości" typ="Cecha kodu"/>
+  <cecha waga="70" identyfikator="ZbiorWykorzystywanychPlikowProperty" nazwa="Zbiór wykorzystywanych plików" typ="Cecha kodu"/>
+  <cecha waga="70" identyfikator="ZbiorWykorzystywanychAdresowProperty" nazwa="Zbiór wykorzystywanych adresów" typ="Cecha kodu"/>
+  <cecha waga="70" identyfikator="ZbiorWykorzystywanychPortowProperty" nazwa="Zbiór wykorzystywanych portów" typ="Cecha kodu"/>
 </cechy>

@@ -43,6 +43,96 @@ namespace SoftAnalyzerClient
             SetMechanizmWielowatkowosciPropertyy();
             SetLiczbaLiniiKoduProperty();
             SetRozmiaryPlikowKodowZrodlowychProperty();
+            SetZbiorWykorzystywanychPlikow();
+            SetZbiorWykorzystywanychAdresow();
+            SetZbiorWykorzystywanychPortow();
+        }
+
+        private void SetZbiorWykorzystywanychPortow()
+        {
+            int liczbaWykryc = 0;
+            List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
+            foreach (var item in podmiot1.ZbiorWykorzystywanychPortowProperty)
+            {
+                foreach (var item2 in podmiot2.ZbiorWykorzystywanychPortowProperty)
+                {
+                    if (item.Equals(item2))
+                    {
+                        liczbaWykryc++;
+                        wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
+                        break;
+                    }
+                }
+            }
+
+            if ((podmiot1.ZbiorWykorzystywanychPortowProperty.Count + podmiot2.ZbiorWykorzystywanychPortowProperty.Count) >= 0)
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychPortowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychPortowProperty.Count + podmiot2.ZbiorWykorzystywanychPortowProperty.Count));
+            }
+            else
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychPortowProperty", 0.0f);
+            }
+
+            Tabela1xM("ZbiorWykorzystywanychPortowProperty", "Wykryte porty", wykryte);
+        }
+
+        private void SetZbiorWykorzystywanychAdresow()
+        {
+            int liczbaWykryc = 0;
+            List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
+            foreach (var item in podmiot1.ZbiorWykorzystywanychAdresowProperty)
+            {
+                foreach (var item2 in podmiot2.ZbiorWykorzystywanychAdresowProperty)
+                {
+                    if (item.Equals(item2))
+                    {
+                        liczbaWykryc++;
+                        wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
+                        break;
+                    }
+                }
+            }
+
+            if ((podmiot1.ZbiorWykorzystywanychAdresowProperty.Count + podmiot2.ZbiorWykorzystywanychAdresowProperty.Count) >= 0)
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychAdresowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychAdresowProperty.Count + podmiot2.ZbiorWykorzystywanychAdresowProperty.Count));
+            }
+            else
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychAdresowProperty", 0.0f);
+            }
+
+            Tabela1xM("ZbiorWykorzystywanychAdresowProperty", "Wykryte adresy", wykryte);
+        }
+
+        private void SetZbiorWykorzystywanychPlikow()
+        {
+            int liczbaWykryc = 0;
+            List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
+            foreach (var item in podmiot1.ZbiorWykorzystywanychPlikowProperty)
+            {
+                foreach (var item2 in podmiot2.ZbiorWykorzystywanychPlikowProperty)
+                {
+                    if (item.Equals(item2))
+                    {
+                        liczbaWykryc++;
+                        wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
+                        break;
+                    }
+                }
+            }
+
+            if ((podmiot1.ZbiorWykorzystywanychPlikowProperty.Count + podmiot2.ZbiorWykorzystywanychPlikowProperty.Count) > 0)
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychPlikowProperty.Count + podmiot2.ZbiorWykorzystywanychPlikowProperty.Count));
+            }
+            else
+            {
+                SetPodobienstwo("ZbiorWykorzystywanychPlikowProperty", 0.0f);
+            }
+
+            Tabela1xM("ZbiorWykorzystywanychPlikowProperty", "Wykryte pliki", wykryte);
         }
 
         public void DodajCeche(String identyfikator, int waga, string typ, string nazwa)
@@ -121,7 +211,7 @@ namespace SoftAnalyzerClient
             //SetPodobienstwo("LiczbaAtrybutowProperty", (podmiot1.LiczbaAtrybutowProperty.Equals(podmiot2.LiczbaAtrybutowProperty)) ? 1.0f : 0.0f);
             SetPodobienstwo("LiczbaAtrybutowProperty", PodobienstwoXtoX(podmiot1.LiczbaAtrybutowProperty, podmiot2.LiczbaAtrybutowProperty));
 
-            Tabela3x2("LiczbaAtrybutowProperty", "Liczba atrybutów", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
+            Tabela3x2("LiczbaAtrybutowProperty", "Liczba zmiennych", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
 
         }
 
@@ -139,6 +229,7 @@ namespace SoftAnalyzerClient
             float liczbaWykryc = 0.0f;
             foreach (var item in podmiot1.LiczbaAtrybutowWKlasach)
             {
+                ServiceReference1.atrybutyPlikow itemDoUsuniecia = null;
                 foreach (var item2 in podmiot2.LiczbaAtrybutowWKlasach)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
@@ -146,13 +237,24 @@ namespace SoftAnalyzerClient
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.liczba.ToString(), wartosc2 = item2.liczba.ToString()});
                         liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
                         // TODO: jeszcze jeden else powinien byc
+                        itemDoUsuniecia =  item2;
+                        break;
                     }
                 }
+                podmiot2.LiczbaAtrybutowWKlasach.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("LiczbaAtrybutowWKlasach", (float)liczbaWykryc / (float)podmiot1.LiczbaAtrybutowWKlasach.Count);
             //SetPodobienstwo("LiczbaAtrybutowWKlasach", (float)liczbaWykryc / (float)(podmiot1.LiczbaAtrybutowWKlasach.Count + podmiot2.LiczbaAtrybutowWKlasach.Count));
-            SetPodobienstwo("LiczbaAtrybutowWKlasach", liczbaWykryc / (float)wykryte.Count);
+
+            if(wykryte.Count == 0)
+            {
+                SetPodobienstwo("LiczbaAtrybutowWKlasach", 0.0f);
+            }
+            else
+            {
+                SetPodobienstwo("LiczbaAtrybutowWKlasach", liczbaWykryc / (float)wykryte.Count);
+            }
 
             //Tabela2xM("LiczbaAtrybutowWKlasach", "Wykryty plik", "Liczba atrybutów", wykryte);
             Tabela3xM("LiczbaAtrybutowWKlasach","Nazwa pliku",wykryte);
@@ -170,12 +272,19 @@ namespace SoftAnalyzerClient
                     {
                         liczbaWykryc++;
                         wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
+                        break;
                     }
                 }
             }
 
-            //SetPodobienstwo("ZbiorBibliotekProperty", (float)liczbaWykryc / (float)podmiot1.ZbiorBibliotekProperty.Count);
-            SetPodobienstwo("ZbiorBibliotekProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorBibliotekProperty.Count + podmiot2.ZbiorBibliotekProperty.Count));
+            if((podmiot1.ZbiorBibliotekProperty.Count + podmiot2.ZbiorBibliotekProperty.Count) >= 0)
+            {
+                SetPodobienstwo("ZbiorBibliotekProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorBibliotekProperty.Count + podmiot2.ZbiorBibliotekProperty.Count));
+            }
+            else
+            {
+                SetPodobienstwo("ZbiorBibliotekProperty", 0.0f);
+            }
 
             Tabela1xM("ZbiorBibliotekProperty", "Wykryte biblioteki", wykryte);
         }
@@ -194,6 +303,7 @@ namespace SoftAnalyzerClient
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             foreach (var item in podmiot1.LiczbaLiniiKoduProperty)
             {
+                ServiceReference1.liczbaLiniiKodu itemDoUsuniecia = null;
                 foreach (var item2 in podmiot2.LiczbaLiniiKoduProperty)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
@@ -201,14 +311,24 @@ namespace SoftAnalyzerClient
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.liczbaLinii.ToString(), wartosc2 = item2.liczbaLinii.ToString() });
                         liczbaWykryc += PodobienstwoXtoX(item.liczbaLinii, item2.liczbaLinii);
                         // TODO: jeszcze jeden else powinien byc
-
+                        itemDoUsuniecia = item2;
+                        break;
                     }
                 }
+                podmiot2.LiczbaLiniiKoduProperty.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("LiczbaLiniiKoduProperty", (float)liczbaWykryc / (float)podmiot1.LiczbaLiniiKoduProperty.Count);
             //SetPodobienstwo("LiczbaLiniiKoduProperty", (float)liczbaWykryc / (float)(podmiot1.LiczbaLiniiKoduProperty.Count + podmiot2.LiczbaLiniiKoduProperty.Count));
-            SetPodobienstwo("LiczbaLiniiKoduProperty", liczbaWykryc / (float)(wykryte.Count));
+            if(wykryte.Count > 0)
+            {
+                SetPodobienstwo("LiczbaLiniiKoduProperty", liczbaWykryc / (float)(wykryte.Count));
+            }
+            else
+            {
+                SetPodobienstwo("LiczbaLiniiKoduProperty", 0.0f);
+            }
+            
             
             //Tabela2xM("LiczbaLiniiKoduProperty", "Nazwa pliku", "Liczba linii kodu", wykryte);
             Tabela3xM("LiczbaLiniiKoduProperty","Nazwa Pliku",wykryte);
@@ -220,6 +340,7 @@ namespace SoftAnalyzerClient
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             foreach (var item in podmiot1.RozmiaryPlikowKodowZrodlowychProperty)
             {
+                ServiceReference1.rozmiaryPlikow itemDoUsuniecia = null;
                 foreach (var item2 in podmiot2.RozmiaryPlikowKodowZrodlowychProperty)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
@@ -228,9 +349,12 @@ namespace SoftAnalyzerClient
                         wykryte.Add(new SzczegolowaTabela() { nazwa = item.nazwa, wartosc1 = item.rozmiar.ToString(), wartosc2 = item2.rozmiar.ToString() });
                         liczbaWykryc += PodobienstwoXtoX(item.rozmiar, item2.rozmiar);
                         // TODO: jeszcze jeden else powinien byc
+                        itemDoUsuniecia = item2;
+                        break;
 
                     }
                 }
+                podmiot2.RozmiaryPlikowKodowZrodlowychProperty.Remove(itemDoUsuniecia);
             }
             Console.WriteLine("liczba wykryć: " + liczbaWykryc + " wykryte: " + wykryte.Count);
             //SetPodobienstwo("RozmiaryPlikowKodowZrodlowychProperty", (float)liczbaWykryc / (float)podmiot1.RozmiaryPlikowKodowZrodlowychProperty.Count);
@@ -304,6 +428,7 @@ namespace SoftAnalyzerClient
                     {
                         liczbaWykryc++;
                         wykryte.Add(new SzczegolowaTabela() { wartosc1 = item.rozszerzenie, wartosc2 = item.liczba.ToString() });
+                        break;
                     }
                 }
             }
@@ -327,7 +452,7 @@ namespace SoftAnalyzerClient
 
                         liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
                         // TODO: jeszcze jeden else powinien byc
-
+                        break;
                     }
                 }
             }
@@ -372,6 +497,7 @@ namespace SoftAnalyzerClient
 
                         liczbaWykryc += PodobienstwoXtoX(item.liczba, item2.liczba);
                         // TODO: jeszcze jeden else powinien byc
+                        break;
 
                     }
                 }
@@ -388,20 +514,29 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
+
+            int liczbaSkrotow = podmiot2.SkrotyPlikowProperty.Count;
+
             foreach (var item in podmiot1.SkrotyPlikowProperty)
             {
+                ServiceReference1.hashePlikow itemDoUsuniecia = null;
                 foreach (var item2 in podmiot2.SkrotyPlikowProperty)
                 {
                     if (item.hash.Equals(item2.hash))
                     {
                         liczbaWykryc++;
                         wykryte.Add(new SzczegolowaTabela() { wartosc1 = item.nazwa });
+                        itemDoUsuniecia = item2;
+                        break;
                     }
                 }
+                podmiot2.SkrotyPlikowProperty.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)podmiot1.SkrotyPlikowProperty.Count);
-            SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.SkrotyPlikowProperty.Count + podmiot2.SkrotyPlikowProperty.Count));
+
+            //Console.WriteLine("liczba wykryc " + liczbaWykryc + " count1 " + podmiot1.SkrotyPlikowProperty.Count + " count2 " + liczbaSkrotow);
+            SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.SkrotyPlikowProperty.Count + liczbaSkrotow));
             Tabela1xM("SkrotyPlikowProperty","Identyczne pliki", wykryte);
         }
 

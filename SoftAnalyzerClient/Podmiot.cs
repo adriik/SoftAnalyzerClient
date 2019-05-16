@@ -10,6 +10,9 @@ namespace SoftAnalyzerClient
         public int LiczbaMetodProperty { get; set; }
         public LinkedList<ServiceReference1.atrybutyPlikow> LiczbaAtrybutowWKlasach { get; set; }
         public List<string> ZbiorBibliotekProperty { get; set; }
+        public List<string> ZbiorWykorzystywanychPlikowProperty { get; set; }
+        public List<string> ZbiorWykorzystywanychAdresowProperty { get; set; }
+        public List<string> ZbiorWykorzystywanychPortowProperty { get; set; }
         public int LiczbaPlikowProperty { get; set; }
         public LinkedList<ServiceReference1.liczbaLiniiKodu> LiczbaLiniiKoduProperty { get; set; }
         public LinkedList<ServiceReference1.rozmiaryPlikow> RozmiaryPlikowKodowZrodlowychProperty { get; set; }
@@ -51,6 +54,34 @@ namespace SoftAnalyzerClient
             this.LiczbaZmiennychDanegoTypuProperty = new LinkedList<ServiceReference1.typyZmiennych>(soap.getLiczbaZmiennychDanegoTypu(NazwaPodmiotu));
             this.ParadygmatProperty = soap.getParadygmat(NazwaPodmiotu);
             this.MechanizmWielowatkowosciProperty = soap.getWykorzystanieWielowatkowosci(NazwaPodmiotu);
+
+            string[] temp1 = soap.getZbiorWykorzystywanychAdresow(NazwaPodmiotu);
+            if (temp1 != null)
+            {
+                this.ZbiorWykorzystywanychAdresowProperty = new List<string>(soap.getZbiorWykorzystywanychAdresow(NazwaPodmiotu));
+            }
+            else
+            {
+                this.ZbiorWykorzystywanychAdresowProperty = new List<string>();
+            }
+            string[] temp2 = soap.getZbiorWykorzystywanychPortow(NazwaPodmiotu);
+            if (temp2 != null)
+            {
+                this.ZbiorWykorzystywanychPortowProperty = new List<string>(soap.getZbiorWykorzystywanychPortow(NazwaPodmiotu));
+            }
+            else
+            {
+                this.ZbiorWykorzystywanychPortowProperty = new List<string>();
+            }
+            string[] temp3 = soap.getZbiorWykorzystywanychPlikow(NazwaPodmiotu);
+            if (temp3 != null)
+            {
+                this.ZbiorWykorzystywanychPlikowProperty = new List<string>(soap.getZbiorWykorzystywanychPlikow(NazwaPodmiotu));
+            }
+            else
+            {
+                this.ZbiorWykorzystywanychPlikowProperty = new List<string>();
+            }
         }
     }
 }

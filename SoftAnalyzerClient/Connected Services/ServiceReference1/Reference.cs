@@ -25,6 +25,87 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwPlikowResponse> getListaNazwPlikowAsync(SoftAnalyzerClient.ServiceReference1.getListaNazwPlikow request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaPlikowDanegoRozszerzenia", ReplyAction="http://webService/ServiceSA/getLiczbaPlikowDanegoRozszerzeniaResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse getLiczbaPlikowDanegoRozszerzenia(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaPlikowDanegoRozszerzenia", ReplyAction="http://webService/ServiceSA/getLiczbaPlikowDanegoRozszerzeniaResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> getLiczbaPlikowDanegoRozszerzeniaAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaZnakow", ReplyAction="http://webService/ServiceSA/getLiczbaZnakowResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse getLiczbaZnakow(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaZnakow", ReplyAction="http://webService/ServiceSA/getLiczbaZnakowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> getLiczbaZnakowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetListaNazwKatalogow", ReplyAction="http://webService/ServiceSA/getListaNazwKatalogowResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse getListaNazwKatalogow(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetListaNazwKatalogow", ReplyAction="http://webService/ServiceSA/getListaNazwKatalogowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> getListaNazwKatalogowAsync(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychPlikow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychPlikowResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse getZbiorWykorzystywanychPlikow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychPlikow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychPlikowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse> getZbiorWykorzystywanychPlikowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:PrzeslijPlik", ReplyAction="http://webService/ServiceSA/przeslijPlikResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse przeslijPlik(SoftAnalyzerClient.ServiceReference1.przeslijPlik request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:PrzeslijPlik", ReplyAction="http://webService/ServiceSA/przeslijPlikResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> przeslijPlikAsync(SoftAnalyzerClient.ServiceReference1.przeslijPlik request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaAtrybutow", ReplyAction="http://webService/ServiceSA/getLiczbaAtrybutowResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse getLiczbaAtrybutow(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaAtrybutow", ReplyAction="http://webService/ServiceSA/getLiczbaAtrybutowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> getLiczbaAtrybutowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorBibliotek", ReplyAction="http://webService/ServiceSA/getZbiorBibliotekResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse getZbiorBibliotek(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorBibliotek", ReplyAction="http://webService/ServiceSA/getZbiorBibliotekResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> getZbiorBibliotekAsync(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetRozmiaryPlikowKodow", ReplyAction="http://webService/ServiceSA/getRozmiaryPlikowKodowResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse getRozmiaryPlikowKodow(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetRozmiaryPlikowKodow", ReplyAction="http://webService/ServiceSA/getRozmiaryPlikowKodowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> getRozmiaryPlikowKodowAsync(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetJezykInterfejsu", ReplyAction="http://webService/ServiceSA/getJezykInterfejsuResponse")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
+        SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse getJezykInterfejsu(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetJezykInterfejsu", ReplyAction="http://webService/ServiceSA/getJezykInterfejsuResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> getJezykInterfejsuAsync(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request);
+        
+        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetParadygmat", ReplyAction="http://webService/ServiceSA/getParadygmatResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -52,13 +133,13 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZmiennychDanegoTypuResponse> getLiczbaZmiennychDanegoTypuAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaZmiennychDanegoTypu request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaPlikowDanegoRozszerzenia", ReplyAction="http://webService/ServiceSA/getLiczbaPlikowDanegoRozszerzeniaResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychPortow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychPortowResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse getLiczbaPlikowDanegoRozszerzenia(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request);
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse getZbiorWykorzystywanychPortow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaPlikowDanegoRozszerzenia", ReplyAction="http://webService/ServiceSA/getLiczbaPlikowDanegoRozszerzeniaResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> getLiczbaPlikowDanegoRozszerzeniaAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychPortow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychPortowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse> getZbiorWykorzystywanychPortowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaDanychWejsciowych", ReplyAction="http://webService/ServiceSA/getLiczbaDanychWejsciowychResponse")]
@@ -88,33 +169,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getMozliwosciWczytywaniaPlikowResponse> getMozliwosciWczytywaniaPlikowAsync(SoftAnalyzerClient.ServiceReference1.getMozliwosciWczytywaniaPlikow request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaZnakow", ReplyAction="http://webService/ServiceSA/getLiczbaZnakowResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse getLiczbaZnakow(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaZnakow", ReplyAction="http://webService/ServiceSA/getLiczbaZnakowResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> getLiczbaZnakowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetListaNazwKatalogow", ReplyAction="http://webService/ServiceSA/getListaNazwKatalogowResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse getListaNazwKatalogow(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetListaNazwKatalogow", ReplyAction="http://webService/ServiceSA/getListaNazwKatalogowResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> getListaNazwKatalogowAsync(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:PrzeslijPlik", ReplyAction="http://webService/ServiceSA/przeslijPlikResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse przeslijPlik(SoftAnalyzerClient.ServiceReference1.przeslijPlik request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:PrzeslijPlik", ReplyAction="http://webService/ServiceSA/przeslijPlikResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> przeslijPlikAsync(SoftAnalyzerClient.ServiceReference1.przeslijPlik request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaMetod", ReplyAction="http://webService/ServiceSA/getLiczbaMetodResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -142,24 +196,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowWKlasachResponse> getLiczbaAtrybutowWKlasachAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowWKlasach request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaAtrybutow", ReplyAction="http://webService/ServiceSA/getLiczbaAtrybutowResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse getLiczbaAtrybutow(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaAtrybutow", ReplyAction="http://webService/ServiceSA/getLiczbaAtrybutowResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> getLiczbaAtrybutowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorBibliotek", ReplyAction="http://webService/ServiceSA/getZbiorBibliotekResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse getZbiorBibliotek(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorBibliotek", ReplyAction="http://webService/ServiceSA/getZbiorBibliotekResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> getZbiorBibliotekAsync(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetLiczbaLiniiKodu", ReplyAction="http://webService/ServiceSA/getLiczbaLiniiKoduResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
@@ -178,13 +214,13 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoTypuResponse> getLiczbaPlikowDanegoTypuAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoTypu request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetRozmiaryPlikowKodow", ReplyAction="http://webService/ServiceSA/getRozmiaryPlikowKodowResponse")]
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychAdresow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychAdresowResponse")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse getRozmiaryPlikowKodow(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request);
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse getZbiorWykorzystywanychAdresow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow request);
         
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetRozmiaryPlikowKodow", ReplyAction="http://webService/ServiceSA/getRozmiaryPlikowKodowResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> getRozmiaryPlikowKodowAsync(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request);
+        [System.ServiceModel.OperationContractAttribute(Action="urn:GetZbiorWykorzystywanychAdresow", ReplyAction="http://webService/ServiceSA/getZbiorWykorzystywanychAdresowResponse")]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse> getZbiorWykorzystywanychAdresowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow request);
         
         // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetSkrotyPlikow", ReplyAction="http://webService/ServiceSA/getSkrotyPlikowResponse")]
@@ -194,15 +230,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         
         [System.ServiceModel.OperationContractAttribute(Action="urn:GetSkrotyPlikow", ReplyAction="http://webService/ServiceSA/getSkrotyPlikowResponse")]
         System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getSkrotyPlikowResponse> getSkrotyPlikowAsync(SoftAnalyzerClient.ServiceReference1.getSkrotyPlikow request);
-        
-        // CODEGEN: Parametr „return” wymaga dodatkowych informacji o schemacie, których nie można uzyskać w trybie parametru. Określony atrybut to „System.Xml.Serialization.XmlElementAttribute”.
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetJezykInterfejsu", ReplyAction="http://webService/ServiceSA/getJezykInterfejsuResponse")]
-        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        [return: System.ServiceModel.MessageParameterAttribute(Name="return")]
-        SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse getJezykInterfejsu(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request);
-        
-        [System.ServiceModel.OperationContractAttribute(Action="urn:GetJezykInterfejsu", ReplyAction="http://webService/ServiceSA/getJezykInterfejsuResponse")]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> getJezykInterfejsuAsync(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -241,99 +268,27 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
     }
     
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getParadygmat", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getParadygmat {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getParadygmat() {
-        }
-        
-        public getParadygmat(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getParadygmatResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getParadygmatResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public getParadygmatResponse() {
-        }
-        
-        public getParadygmatResponse(string @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getWykorzystanieWielowatkowosci", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getWykorzystanieWielowatkowosci {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getWykorzystanieWielowatkowosci() {
-        }
-        
-        public getWykorzystanieWielowatkowosci(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getWykorzystanieWielowatkowosciResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getWykorzystanieWielowatkowosciResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public bool @return;
-        
-        public getWykorzystanieWielowatkowosciResponse() {
-        }
-        
-        public getWykorzystanieWielowatkowosciResponse(bool @return) {
-            this.@return = @return;
-        }
-    }
-    
     /// <remarks/>
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
     [System.SerializableAttribute()]
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webService/")]
-    public partial class typyZmiennych : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class rozszerzeniaPlikow : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string typField;
+        private string rozszerzenieField;
         
         private int liczbaField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string typ {
+        public string rozszerzenie {
             get {
-                return this.typField;
+                return this.rozszerzenieField;
             }
             set {
-                this.typField = value;
-                this.RaisePropertyChanged("typ");
+                this.rozszerzenieField = value;
+                this.RaisePropertyChanged("rozszerzenie");
             }
         }
         
@@ -380,52 +335,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
             set {
                 this.hashField = value;
                 this.RaisePropertyChanged("hash");
-            }
-        }
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
-        public string nazwa {
-            get {
-                return this.nazwaField;
-            }
-            set {
-                this.nazwaField = value;
-                this.RaisePropertyChanged("nazwa");
-            }
-        }
-        
-        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
-        
-        protected void RaisePropertyChanged(string propertyName) {
-            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
-            if ((propertyChanged != null)) {
-                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
-            }
-        }
-    }
-    
-    /// <remarks/>
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
-    [System.SerializableAttribute()]
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.ComponentModel.DesignerCategoryAttribute("code")]
-    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webService/")]
-    public partial class rozmiaryPlikow : object, System.ComponentModel.INotifyPropertyChanged {
-        
-        private int rozmiarField;
-        
-        private string nazwaField;
-        
-        /// <remarks/>
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public int rozmiar {
-            get {
-                return this.rozmiarField;
-            }
-            set {
-                this.rozmiarField = value;
-                this.RaisePropertyChanged("rozmiar");
             }
         }
         
@@ -609,21 +518,21 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.ComponentModel.DesignerCategoryAttribute("code")]
     [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webService/")]
-    public partial class rozszerzeniaPlikow : object, System.ComponentModel.INotifyPropertyChanged {
+    public partial class typyZmiennych : object, System.ComponentModel.INotifyPropertyChanged {
         
-        private string rozszerzenieField;
+        private string typField;
         
         private int liczbaField;
         
         /// <remarks/>
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
-        public string rozszerzenie {
+        public string typ {
             get {
-                return this.rozszerzenieField;
+                return this.typField;
             }
             set {
-                this.rozszerzenieField = value;
-                this.RaisePropertyChanged("rozszerzenie");
+                this.typField = value;
+                this.RaisePropertyChanged("typ");
             }
         }
         
@@ -646,6 +555,448 @@ namespace SoftAnalyzerClient.ServiceReference1 {
             if ((propertyChanged != null)) {
                 propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
             }
+        }
+    }
+    
+    /// <remarks/>
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Xml", "4.7.3190.0")]
+    [System.SerializableAttribute()]
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.ComponentModel.DesignerCategoryAttribute("code")]
+    [System.Xml.Serialization.XmlTypeAttribute(Namespace="http://webService/")]
+    public partial class rozmiaryPlikow : object, System.ComponentModel.INotifyPropertyChanged {
+        
+        private int rozmiarField;
+        
+        private string nazwaField;
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=0)]
+        public int rozmiar {
+            get {
+                return this.rozmiarField;
+            }
+            set {
+                this.rozmiarField = value;
+                this.RaisePropertyChanged("rozmiar");
+            }
+        }
+        
+        /// <remarks/>
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified, Order=1)]
+        public string nazwa {
+            get {
+                return this.nazwaField;
+            }
+            set {
+                this.nazwaField = value;
+                this.RaisePropertyChanged("nazwa");
+            }
+        }
+        
+        public event System.ComponentModel.PropertyChangedEventHandler PropertyChanged;
+        
+        protected void RaisePropertyChanged(string propertyName) {
+            System.ComponentModel.PropertyChangedEventHandler propertyChanged = this.PropertyChanged;
+            if ((propertyChanged != null)) {
+                propertyChanged(this, new System.ComponentModel.PropertyChangedEventArgs(propertyName));
+            }
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaPlikowDanegoRozszerzenia", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaPlikowDanegoRozszerzenia {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getLiczbaPlikowDanegoRozszerzenia() {
+        }
+        
+        public getLiczbaPlikowDanegoRozszerzenia(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaPlikowDanegoRozszerzeniaResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaPlikowDanegoRozszerzeniaResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] @return;
+        
+        public getLiczbaPlikowDanegoRozszerzeniaResponse() {
+        }
+        
+        public getLiczbaPlikowDanegoRozszerzeniaResponse(SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaZnakow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaZnakow {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getLiczbaZnakow() {
+        }
+        
+        public getLiczbaZnakow(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaZnakowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaZnakowResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public getLiczbaZnakowResponse() {
+        }
+        
+        public getLiczbaZnakowResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getListaNazwKatalogow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getListaNazwKatalogow {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getListaNazwKatalogow() {
+        }
+        
+        public getListaNazwKatalogow(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getListaNazwKatalogowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getListaNazwKatalogowResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getListaNazwKatalogowResponse() {
+        }
+        
+        public getListaNazwKatalogowResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychPlikow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychPlikow {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getZbiorWykorzystywanychPlikow() {
+        }
+        
+        public getZbiorWykorzystywanychPlikow(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychPlikowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychPlikowResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getZbiorWykorzystywanychPlikowResponse() {
+        }
+        
+        public getZbiorWykorzystywanychPlikowResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="przeslijPlik", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class przeslijPlik {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public przeslijPlik() {
+        }
+        
+        public przeslijPlik(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="przeslijPlikResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class przeslijPlikResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public przeslijPlikResponse() {
+        }
+        
+        public przeslijPlikResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaAtrybutow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaAtrybutow {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getLiczbaAtrybutow() {
+        }
+        
+        public getLiczbaAtrybutow(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaAtrybutowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getLiczbaAtrybutowResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public int @return;
+        
+        public getLiczbaAtrybutowResponse() {
+        }
+        
+        public getLiczbaAtrybutowResponse(int @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorBibliotek", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorBibliotek {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getZbiorBibliotek() {
+        }
+        
+        public getZbiorBibliotek(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorBibliotekResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorBibliotekResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string[] @return;
+        
+        public getZbiorBibliotekResponse() {
+        }
+        
+        public getZbiorBibliotekResponse(string[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getRozmiaryPlikowKodow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getRozmiaryPlikowKodow {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getRozmiaryPlikowKodow() {
+        }
+        
+        public getRozmiaryPlikowKodow(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getRozmiaryPlikowKodowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getRozmiaryPlikowKodowResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] @return;
+        
+        public getRozmiaryPlikowKodowResponse() {
+        }
+        
+        public getRozmiaryPlikowKodowResponse(SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getJezykInterfejsu", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getJezykInterfejsu {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getJezykInterfejsu() {
+        }
+        
+        public getJezykInterfejsu(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getJezykInterfejsuResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getJezykInterfejsuResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public getJezykInterfejsuResponse() {
+        }
+        
+        public getJezykInterfejsuResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getParadygmat", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getParadygmat {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getParadygmat() {
+        }
+        
+        public getParadygmat(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getParadygmatResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getParadygmatResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string @return;
+        
+        public getParadygmatResponse() {
+        }
+        
+        public getParadygmatResponse(string @return) {
+            this.@return = @return;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getWykorzystanieWielowatkowosci", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getWykorzystanieWielowatkowosci {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public string arg0;
+        
+        public getWykorzystanieWielowatkowosci() {
+        }
+        
+        public getWykorzystanieWielowatkowosci(string arg0) {
+            this.arg0 = arg0;
+        }
+    }
+    
+    [System.Diagnostics.DebuggerStepThroughAttribute()]
+    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
+    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getWykorzystanieWielowatkowosciResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getWykorzystanieWielowatkowosciResponse {
+        
+        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
+        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
+        public bool @return;
+        
+        public getWykorzystanieWielowatkowosciResponse() {
+        }
+        
+        public getWykorzystanieWielowatkowosciResponse(bool @return) {
+            this.@return = @return;
         }
     }
     
@@ -688,17 +1039,17 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaPlikowDanegoRozszerzenia", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaPlikowDanegoRozszerzenia {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychPortow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychPortow {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg0;
         
-        public getLiczbaPlikowDanegoRozszerzenia() {
+        public getZbiorWykorzystywanychPortow() {
         }
         
-        public getLiczbaPlikowDanegoRozszerzenia(string arg0) {
+        public getZbiorWykorzystywanychPortow(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -706,17 +1057,17 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaPlikowDanegoRozszerzeniaResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaPlikowDanegoRozszerzeniaResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychPortowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychPortowResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] @return;
+        public string[] @return;
         
-        public getLiczbaPlikowDanegoRozszerzeniaResponse() {
+        public getZbiorWykorzystywanychPortowResponse() {
         }
         
-        public getLiczbaPlikowDanegoRozszerzeniaResponse(SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] @return) {
+        public getZbiorWykorzystywanychPortowResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -832,114 +1183,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaZnakow", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaZnakow {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getLiczbaZnakow() {
-        }
-        
-        public getLiczbaZnakow(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaZnakowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaZnakowResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public getLiczbaZnakowResponse() {
-        }
-        
-        public getLiczbaZnakowResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getListaNazwKatalogow", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getListaNazwKatalogow {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getListaNazwKatalogow() {
-        }
-        
-        public getListaNazwKatalogow(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getListaNazwKatalogowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getListaNazwKatalogowResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public getListaNazwKatalogowResponse() {
-        }
-        
-        public getListaNazwKatalogowResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="przeslijPlik", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class przeslijPlik {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public przeslijPlik() {
-        }
-        
-        public przeslijPlik(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="przeslijPlikResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class przeslijPlikResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public przeslijPlikResponse() {
-        }
-        
-        public przeslijPlikResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaMetod", WrapperNamespace="http://webService/", IsWrapped=true)]
     public partial class getLiczbaMetod {
         
@@ -1048,78 +1291,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaAtrybutow", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaAtrybutow {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getLiczbaAtrybutow() {
-        }
-        
-        public getLiczbaAtrybutow(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaAtrybutowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getLiczbaAtrybutowResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public int @return;
-        
-        public getLiczbaAtrybutowResponse() {
-        }
-        
-        public getLiczbaAtrybutowResponse(int @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorBibliotek", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getZbiorBibliotek {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getZbiorBibliotek() {
-        }
-        
-        public getZbiorBibliotek(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorBibliotekResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getZbiorBibliotekResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string[] @return;
-        
-        public getZbiorBibliotekResponse() {
-        }
-        
-        public getZbiorBibliotekResponse(string[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
     [System.ServiceModel.MessageContractAttribute(WrapperName="getLiczbaLiniiKodu", WrapperNamespace="http://webService/", IsWrapped=true)]
     public partial class getLiczbaLiniiKodu {
         
@@ -1192,17 +1363,17 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getRozmiaryPlikowKodow", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getRozmiaryPlikowKodow {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychAdresow", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychAdresow {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
         public string arg0;
         
-        public getRozmiaryPlikowKodow() {
+        public getZbiorWykorzystywanychAdresow() {
         }
         
-        public getRozmiaryPlikowKodow(string arg0) {
+        public getZbiorWykorzystywanychAdresow(string arg0) {
             this.arg0 = arg0;
         }
     }
@@ -1210,17 +1381,17 @@ namespace SoftAnalyzerClient.ServiceReference1 {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
     [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getRozmiaryPlikowKodowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getRozmiaryPlikowKodowResponse {
+    [System.ServiceModel.MessageContractAttribute(WrapperName="getZbiorWykorzystywanychAdresowResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
+    public partial class getZbiorWykorzystywanychAdresowResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
         [System.Xml.Serialization.XmlElementAttribute("return", Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] @return;
+        public string[] @return;
         
-        public getRozmiaryPlikowKodowResponse() {
+        public getZbiorWykorzystywanychAdresowResponse() {
         }
         
-        public getRozmiaryPlikowKodowResponse(SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] @return) {
+        public getZbiorWykorzystywanychAdresowResponse(string[] @return) {
             this.@return = @return;
         }
     }
@@ -1257,42 +1428,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
         
         public getSkrotyPlikowResponse(SoftAnalyzerClient.ServiceReference1.hashePlikow[] @return) {
-            this.@return = @return;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getJezykInterfejsu", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getJezykInterfejsu {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string arg0;
-        
-        public getJezykInterfejsu() {
-        }
-        
-        public getJezykInterfejsu(string arg0) {
-            this.arg0 = arg0;
-        }
-    }
-    
-    [System.Diagnostics.DebuggerStepThroughAttribute()]
-    [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-    [System.ServiceModel.MessageContractAttribute(WrapperName="getJezykInterfejsuResponse", WrapperNamespace="http://webService/", IsWrapped=true)]
-    public partial class getJezykInterfejsuResponse {
-        
-        [System.ServiceModel.MessageBodyMemberAttribute(Namespace="http://webService/", Order=0)]
-        [System.Xml.Serialization.XmlElementAttribute(Form=System.Xml.Schema.XmlSchemaForm.Unqualified)]
-        public string @return;
-        
-        public getJezykInterfejsuResponse() {
-        }
-        
-        public getJezykInterfejsuResponse(string @return) {
             this.@return = @return;
         }
     }
@@ -1345,6 +1480,213 @@ namespace SoftAnalyzerClient.ServiceReference1 {
             SoftAnalyzerClient.ServiceReference1.getListaNazwPlikow inValue = new SoftAnalyzerClient.ServiceReference1.getListaNazwPlikow();
             inValue.arg0 = arg0;
             return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getListaNazwPlikowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaPlikowDanegoRozszerzenia(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request) {
+            return base.Channel.getLiczbaPlikowDanegoRozszerzenia(request);
+        }
+        
+        public SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] getLiczbaPlikowDanegoRozszerzenia(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaPlikowDanegoRozszerzenia(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaPlikowDanegoRozszerzeniaAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request) {
+            return base.Channel.getLiczbaPlikowDanegoRozszerzeniaAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> getLiczbaPlikowDanegoRozszerzeniaAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaPlikowDanegoRozszerzeniaAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaZnakow(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request) {
+            return base.Channel.getLiczbaZnakow(request);
+        }
+        
+        public int getLiczbaZnakow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaZnakow(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaZnakowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request) {
+            return base.Channel.getLiczbaZnakowAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> getLiczbaZnakowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaZnakowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getListaNazwKatalogow(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request) {
+            return base.Channel.getListaNazwKatalogow(request);
+        }
+        
+        public string[] getListaNazwKatalogow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow inValue = new SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getListaNazwKatalogow(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getListaNazwKatalogowAsync(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request) {
+            return base.Channel.getListaNazwKatalogowAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> getListaNazwKatalogowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow inValue = new SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getListaNazwKatalogowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychPlikow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow request) {
+            return base.Channel.getZbiorWykorzystywanychPlikow(request);
+        }
+        
+        public string[] getZbiorWykorzystywanychPlikow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychPlikow(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychPlikowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow request) {
+            return base.Channel.getZbiorWykorzystywanychPlikowAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikowResponse> getZbiorWykorzystywanychPlikowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPlikow();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychPlikowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.przeslijPlik(SoftAnalyzerClient.ServiceReference1.przeslijPlik request) {
+            return base.Channel.przeslijPlik(request);
+        }
+        
+        public string[] przeslijPlik(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.przeslijPlik inValue = new SoftAnalyzerClient.ServiceReference1.przeslijPlik();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).przeslijPlik(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.przeslijPlikAsync(SoftAnalyzerClient.ServiceReference1.przeslijPlik request) {
+            return base.Channel.przeslijPlikAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> przeslijPlikAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.przeslijPlik inValue = new SoftAnalyzerClient.ServiceReference1.przeslijPlik();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).przeslijPlikAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaAtrybutow(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request) {
+            return base.Channel.getLiczbaAtrybutow(request);
+        }
+        
+        public int getLiczbaAtrybutow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaAtrybutow(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaAtrybutowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request) {
+            return base.Channel.getLiczbaAtrybutowAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> getLiczbaAtrybutowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaAtrybutowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorBibliotek(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request) {
+            return base.Channel.getZbiorBibliotek(request);
+        }
+        
+        public string[] getZbiorBibliotek(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorBibliotek(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorBibliotekAsync(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request) {
+            return base.Channel.getZbiorBibliotekAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> getZbiorBibliotekAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorBibliotekAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getRozmiaryPlikowKodow(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request) {
+            return base.Channel.getRozmiaryPlikowKodow(request);
+        }
+        
+        public SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] getRozmiaryPlikowKodow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow inValue = new SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getRozmiaryPlikowKodow(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getRozmiaryPlikowKodowAsync(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request) {
+            return base.Channel.getRozmiaryPlikowKodowAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> getRozmiaryPlikowKodowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow inValue = new SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getRozmiaryPlikowKodowAsync(inValue);
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getJezykInterfejsu(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request) {
+            return base.Channel.getJezykInterfejsu(request);
+        }
+        
+        public string getJezykInterfejsu(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu inValue = new SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu();
+            inValue.arg0 = arg0;
+            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getJezykInterfejsu(inValue);
+            return retVal.@return;
+        }
+        
+        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getJezykInterfejsuAsync(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request) {
+            return base.Channel.getJezykInterfejsuAsync(request);
+        }
+        
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> getJezykInterfejsuAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu inValue = new SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu();
+            inValue.arg0 = arg0;
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getJezykInterfejsuAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1417,26 +1759,26 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaPlikowDanegoRozszerzenia(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request) {
-            return base.Channel.getLiczbaPlikowDanegoRozszerzenia(request);
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychPortow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow request) {
+            return base.Channel.getZbiorWykorzystywanychPortow(request);
         }
         
-        public SoftAnalyzerClient.ServiceReference1.rozszerzeniaPlikow[] getLiczbaPlikowDanegoRozszerzenia(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia();
+        public string[] getZbiorWykorzystywanychPortow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow();
             inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaPlikowDanegoRozszerzenia(inValue);
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychPortow(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaPlikowDanegoRozszerzeniaAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia request) {
-            return base.Channel.getLiczbaPlikowDanegoRozszerzeniaAsync(request);
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychPortowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow request) {
+            return base.Channel.getZbiorWykorzystywanychPortowAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzeniaResponse> getLiczbaPlikowDanegoRozszerzeniaAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaPlikowDanegoRozszerzenia();
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortowResponse> getZbiorWykorzystywanychPortowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychPortow();
             inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaPlikowDanegoRozszerzeniaAsync(inValue);
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychPortowAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1509,75 +1851,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaZnakow(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request) {
-            return base.Channel.getLiczbaZnakow(request);
-        }
-        
-        public int getLiczbaZnakow(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaZnakow(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaZnakowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow request) {
-            return base.Channel.getLiczbaZnakowAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaZnakowResponse> getLiczbaZnakowAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaZnakow();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaZnakowAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getListaNazwKatalogow(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request) {
-            return base.Channel.getListaNazwKatalogow(request);
-        }
-        
-        public string[] getListaNazwKatalogow(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow inValue = new SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getListaNazwKatalogow(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getListaNazwKatalogowAsync(SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow request) {
-            return base.Channel.getListaNazwKatalogowAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogowResponse> getListaNazwKatalogowAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow inValue = new SoftAnalyzerClient.ServiceReference1.getListaNazwKatalogow();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getListaNazwKatalogowAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.przeslijPlik(SoftAnalyzerClient.ServiceReference1.przeslijPlik request) {
-            return base.Channel.przeslijPlik(request);
-        }
-        
-        public string[] przeslijPlik(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.przeslijPlik inValue = new SoftAnalyzerClient.ServiceReference1.przeslijPlik();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).przeslijPlik(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.przeslijPlikAsync(SoftAnalyzerClient.ServiceReference1.przeslijPlik request) {
-            return base.Channel.przeslijPlikAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.przeslijPlikResponse> przeslijPlikAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.przeslijPlik inValue = new SoftAnalyzerClient.ServiceReference1.przeslijPlik();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).przeslijPlikAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftAnalyzerClient.ServiceReference1.getLiczbaMetodResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaMetod(SoftAnalyzerClient.ServiceReference1.getLiczbaMetod request) {
             return base.Channel.getLiczbaMetod(request);
         }
@@ -1647,52 +1920,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaAtrybutow(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request) {
-            return base.Channel.getLiczbaAtrybutow(request);
-        }
-        
-        public int getLiczbaAtrybutow(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaAtrybutow(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaAtrybutowAsync(SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow request) {
-            return base.Channel.getLiczbaAtrybutowAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutowResponse> getLiczbaAtrybutowAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow inValue = new SoftAnalyzerClient.ServiceReference1.getLiczbaAtrybutow();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getLiczbaAtrybutowAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorBibliotek(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request) {
-            return base.Channel.getZbiorBibliotek(request);
-        }
-        
-        public string[] getZbiorBibliotek(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorBibliotek(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorBibliotekAsync(SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek request) {
-            return base.Channel.getZbiorBibliotekAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorBibliotekResponse> getZbiorBibliotekAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorBibliotek();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorBibliotekAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
         SoftAnalyzerClient.ServiceReference1.getLiczbaLiniiKoduResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getLiczbaLiniiKodu(SoftAnalyzerClient.ServiceReference1.getLiczbaLiniiKodu request) {
             return base.Channel.getLiczbaLiniiKodu(request);
         }
@@ -1739,26 +1966,26 @@ namespace SoftAnalyzerClient.ServiceReference1 {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getRozmiaryPlikowKodow(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request) {
-            return base.Channel.getRozmiaryPlikowKodow(request);
+        SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychAdresow(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow request) {
+            return base.Channel.getZbiorWykorzystywanychAdresow(request);
         }
         
-        public SoftAnalyzerClient.ServiceReference1.rozmiaryPlikow[] getRozmiaryPlikowKodow(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow inValue = new SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow();
+        public string[] getZbiorWykorzystywanychAdresow(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow();
             inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getRozmiaryPlikowKodow(inValue);
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychAdresow(inValue);
             return retVal.@return;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getRozmiaryPlikowKodowAsync(SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow request) {
-            return base.Channel.getRozmiaryPlikowKodowAsync(request);
+        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getZbiorWykorzystywanychAdresowAsync(SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow request) {
+            return base.Channel.getZbiorWykorzystywanychAdresowAsync(request);
         }
         
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodowResponse> getRozmiaryPlikowKodowAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow inValue = new SoftAnalyzerClient.ServiceReference1.getRozmiaryPlikowKodow();
+        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresowResponse> getZbiorWykorzystywanychAdresowAsync(string arg0) {
+            SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow inValue = new SoftAnalyzerClient.ServiceReference1.getZbiorWykorzystywanychAdresow();
             inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getRozmiaryPlikowKodowAsync(inValue);
+            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getZbiorWykorzystywanychAdresowAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -1782,29 +2009,6 @@ namespace SoftAnalyzerClient.ServiceReference1 {
             SoftAnalyzerClient.ServiceReference1.getSkrotyPlikow inValue = new SoftAnalyzerClient.ServiceReference1.getSkrotyPlikow();
             inValue.arg0 = arg0;
             return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getSkrotyPlikowAsync(inValue);
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse SoftAnalyzerClient.ServiceReference1.ServiceSA.getJezykInterfejsu(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request) {
-            return base.Channel.getJezykInterfejsu(request);
-        }
-        
-        public string getJezykInterfejsu(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu inValue = new SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu();
-            inValue.arg0 = arg0;
-            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse retVal = ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getJezykInterfejsu(inValue);
-            return retVal.@return;
-        }
-        
-        [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> SoftAnalyzerClient.ServiceReference1.ServiceSA.getJezykInterfejsuAsync(SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu request) {
-            return base.Channel.getJezykInterfejsuAsync(request);
-        }
-        
-        public System.Threading.Tasks.Task<SoftAnalyzerClient.ServiceReference1.getJezykInterfejsuResponse> getJezykInterfejsuAsync(string arg0) {
-            SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu inValue = new SoftAnalyzerClient.ServiceReference1.getJezykInterfejsu();
-            inValue.arg0 = arg0;
-            return ((SoftAnalyzerClient.ServiceReference1.ServiceSA)(this)).getJezykInterfejsuAsync(inValue);
         }
     }
 }

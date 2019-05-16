@@ -171,8 +171,19 @@ namespace SoftAnalyzerClient
                 Console.WriteLine(ex.ToString());
                 System.Windows.Application.Current.Dispatcher.Invoke(DispatcherPriority.Normal, (ThreadStart)delegate
                 {
+                    PorownajButton.IsEnabled = true;
                     link1.BorderBrush = System.Windows.Media.Brushes.Red;
                     link2.BorderBrush = System.Windows.Media.Brushes.Red;
+
+                    SzczegolySpinner.Visibility = Visibility.Collapsed;
+                    SzczegolyTextBlock.Visibility = Visibility.Visible;
+                    SzczegolyInfo.Visibility = Visibility.Visible;
+
+                    PorownajSpinner.Visibility = Visibility.Collapsed;
+                    PorownajTextBlock.Visibility = Visibility.Visible;
+                    PorownajClone.Visibility = Visibility.Visible;
+                    System.Media.SoundPlayer player = new System.Media.SoundPlayer("fail.wav");
+                    player.Play();
 
                 });
             }
