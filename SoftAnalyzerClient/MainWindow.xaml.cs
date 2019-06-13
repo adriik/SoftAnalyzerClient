@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -16,8 +17,8 @@ namespace SoftAnalyzerClient
     {
         
         private KontenerCech cechy;
-        Podmiot podmiot1;
-        Podmiot podmiot2;
+        Podmiot podmiotNadrzedny;
+        Podmiot podmiotPodrzedny;
         Szczegoly szczegoly;
         public static List<KontenerCech> listaBadan;
         public static float sumaOgolna = 0.0f;
@@ -38,6 +39,14 @@ namespace SoftAnalyzerClient
 
         private void MainWindow_Closing(object sender, System.ComponentModel.CancelEventArgs e)
         {
+        
+            
+            //Podmiot.excel.Quit();
+            
+            //if (Podmiot.excel != null)
+            //    System.Runtime.InteropServices.Marshal.ReleaseComObject(Podmiot.excel);
+            //Podmiot.excel = null;
+            //GC.Collect();
             Application.Current.Shutdown();
         }
 
@@ -57,8 +66,8 @@ namespace SoftAnalyzerClient
 
         private async void Button_Porownaj_Click(object sender, RoutedEventArgs e)
         {
-            podmiot1 = null;
-            podmiot2 = null;
+            podmiotNadrzedny = null;
+            podmiotPodrzedny = null;
 
             if(szczegoly != null)
             {
@@ -134,11 +143,11 @@ namespace SoftAnalyzerClient
                 cechy = new KontenerCech();
                 PobierzUstawieniaXML();
 
-                podmiot1 = new Podmiot(soap, link1Text);
-                podmiot2 = new Podmiot(soap, link2Text);
+                podmiotNadrzedny = new Podmiot(soap, link1Text);
+                podmiotPodrzedny = new Podmiot(soap, link2Text);
                 
 
-                cechy.WyliczPodobienstwaCech(ref podmiot1, ref podmiot2);
+                cechy.WyliczPodobienstwaCech(ref podmiotNadrzedny, ref podmiotPodrzedny);
                 listaBadan.Add(cechy);
 
 
@@ -164,7 +173,9 @@ namespace SoftAnalyzerClient
                 });
 
                 System.Media.SoundPlayer player = new System.Media.SoundPlayer("alert.wav");
+                //podmiotNadrzedny.PlikExcel(podmiotNadrzedny.NazwaPodmiotu);
                 player.Play();
+
             }
             catch (System.Exception ex)
             {
@@ -204,6 +215,7 @@ namespace SoftAnalyzerClient
                 szczegoly.Show();
 
             }
+            
         }
 
         private float GetPodobienstwoOgolne(KontenerCech cechy)
@@ -232,6 +244,19 @@ namespace SoftAnalyzerClient
         private void ComboBoxHistoria_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
         {
             labelPodobienstwo.Content = "Podobieństwo ogólne: " + Math.Round(GetPodobienstwoOgolne(listaBadan.ElementAt(ComboBoxHistoria.SelectedIndex)), 2);
+        }
+
+        private void ButtonZapiszWyniki_Click(object sender, RoutedEventArgs e)
+        {
+            //OpenFileDialog openFileDialog = new OpenFileDialog();
+            //openFileDialog.ShowDialog();
+            podmiotNadrzedny.PlikExcelNew(podmiotNadrzedny.NazwaPodmiotu);
+            //podmiotNadrzedny.PlikExcelNew(podmiotNadrzedny.NazwaPodmiotu, openFileDialog.FileName);
+        }
+
+        private void ButtonZapiszWynikiPodrzednego_Click(object sender, RoutedEventArgs e)
+        {
+            podmiotPodrzedny.PlikExcelNew(podmiotPodrzedny.NazwaPodmiotu);
         }
     }
 }

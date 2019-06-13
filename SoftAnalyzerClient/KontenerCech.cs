@@ -11,18 +11,26 @@ namespace SoftAnalyzerClient
     public class KontenerCech
     {
         public LinkedList<Cecha> listaCech;
-        private Podmiot podmiot1;
-        private Podmiot podmiot2;
+        private Podmiot podmiotNadrzedny;
+        private Podmiot podmiotPodrzedny;
 
         public KontenerCech()
         {
             listaCech = new LinkedList<Cecha>();
         }
 
+        public SzczegolowaTabela SzczegolowaTabela
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public void WyliczPodobienstwaCech(ref Podmiot podmiot1, ref Podmiot podmiot2)
         {
-            this.podmiot1 = podmiot1;
-            this.podmiot2 = podmiot2;
+            this.podmiotNadrzedny = podmiot1;
+            this.podmiotPodrzedny = podmiot2;
             SetLiczbaAtrybutowProperty();
             SetLiczbaMetodProperty();
             SetLiczbaAtrybutowWKlasach();
@@ -52,9 +60,9 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ZbiorWykorzystywanychPortowProperty)
+            foreach (var item in podmiotNadrzedny.ZbiorWykorzystywanychPortowProperty)
             {
-                foreach (var item2 in podmiot2.ZbiorWykorzystywanychPortowProperty)
+                foreach (var item2 in podmiotPodrzedny.ZbiorWykorzystywanychPortowProperty)
                 {
                     if (item.Equals(item2))
                     {
@@ -65,9 +73,9 @@ namespace SoftAnalyzerClient
                 }
             }
 
-            if ((podmiot1.ZbiorWykorzystywanychPortowProperty.Count + podmiot2.ZbiorWykorzystywanychPortowProperty.Count) >= 0)
+            if ((podmiotNadrzedny.ZbiorWykorzystywanychPortowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychPortowProperty.Count) >= 0)
             {
-                SetPodobienstwo("ZbiorWykorzystywanychPortowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychPortowProperty.Count + podmiot2.ZbiorWykorzystywanychPortowProperty.Count));
+                SetPodobienstwo("ZbiorWykorzystywanychPortowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ZbiorWykorzystywanychPortowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychPortowProperty.Count));
             }
             else
             {
@@ -81,9 +89,9 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ZbiorWykorzystywanychAdresowProperty)
+            foreach (var item in podmiotNadrzedny.ZbiorWykorzystywanychAdresowProperty)
             {
-                foreach (var item2 in podmiot2.ZbiorWykorzystywanychAdresowProperty)
+                foreach (var item2 in podmiotPodrzedny.ZbiorWykorzystywanychAdresowProperty)
                 {
                     if (item.Equals(item2))
                     {
@@ -94,9 +102,9 @@ namespace SoftAnalyzerClient
                 }
             }
 
-            if ((podmiot1.ZbiorWykorzystywanychAdresowProperty.Count + podmiot2.ZbiorWykorzystywanychAdresowProperty.Count) >= 0)
+            if ((podmiotNadrzedny.ZbiorWykorzystywanychAdresowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychAdresowProperty.Count) >= 0)
             {
-                SetPodobienstwo("ZbiorWykorzystywanychAdresowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychAdresowProperty.Count + podmiot2.ZbiorWykorzystywanychAdresowProperty.Count));
+                SetPodobienstwo("ZbiorWykorzystywanychAdresowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ZbiorWykorzystywanychAdresowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychAdresowProperty.Count));
             }
             else
             {
@@ -110,9 +118,9 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ZbiorWykorzystywanychPlikowProperty)
+            foreach (var item in podmiotNadrzedny.ZbiorWykorzystywanychPlikowProperty)
             {
-                foreach (var item2 in podmiot2.ZbiorWykorzystywanychPlikowProperty)
+                foreach (var item2 in podmiotPodrzedny.ZbiorWykorzystywanychPlikowProperty)
                 {
                     if (item.Equals(item2))
                     {
@@ -123,9 +131,9 @@ namespace SoftAnalyzerClient
                 }
             }
 
-            if ((podmiot1.ZbiorWykorzystywanychPlikowProperty.Count + podmiot2.ZbiorWykorzystywanychPlikowProperty.Count) > 0)
+            if ((podmiotNadrzedny.ZbiorWykorzystywanychPlikowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychPlikowProperty.Count) > 0)
             {
-                SetPodobienstwo("ZbiorWykorzystywanychPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorWykorzystywanychPlikowProperty.Count + podmiot2.ZbiorWykorzystywanychPlikowProperty.Count));
+                SetPodobienstwo("ZbiorWykorzystywanychPlikowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ZbiorWykorzystywanychPlikowProperty.Count + podmiotPodrzedny.ZbiorWykorzystywanychPlikowProperty.Count));
             }
             else
             {
@@ -209,28 +217,28 @@ namespace SoftAnalyzerClient
         private void SetLiczbaAtrybutowProperty()
         {
             //SetPodobienstwo("LiczbaAtrybutowProperty", (podmiot1.LiczbaAtrybutowProperty.Equals(podmiot2.LiczbaAtrybutowProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaAtrybutowProperty", PodobienstwoXtoX(podmiot1.LiczbaAtrybutowProperty, podmiot2.LiczbaAtrybutowProperty));
+            SetPodobienstwo("LiczbaAtrybutowProperty", PodobienstwoXtoX(podmiotNadrzedny.LiczbaAtrybutowProperty, podmiotPodrzedny.LiczbaAtrybutowProperty));
 
-            Tabela3x2("LiczbaAtrybutowProperty", "Liczba zmiennych", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
+            Tabela3x2("LiczbaAtrybutowProperty", "Liczba zmiennych", podmiotNadrzedny.LiczbaAtrybutowProperty.ToString(), podmiotPodrzedny.LiczbaAtrybutowProperty.ToString());
 
         }
 
         private void SetLiczbaMetodProperty()
         {
             //SetPodobienstwo("LiczbaMetodProperty", (podmiot1.LiczbaMetodProperty.Equals(podmiot2.LiczbaMetodProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaMetodProperty", PodobienstwoXtoX(podmiot1.LiczbaMetodProperty, podmiot2.LiczbaMetodProperty));
+            SetPodobienstwo("LiczbaMetodProperty", PodobienstwoXtoX(podmiotNadrzedny.LiczbaMetodProperty, podmiotPodrzedny.LiczbaMetodProperty));
 
-            Tabela3x2("LiczbaMetodProperty", "Liczba Metod", podmiot1.LiczbaMetodProperty.ToString(), podmiot2.LiczbaMetodProperty.ToString());
+            Tabela3x2("LiczbaMetodProperty", "Liczba Metod", podmiotNadrzedny.LiczbaMetodProperty.ToString(), podmiotPodrzedny.LiczbaMetodProperty.ToString());
         }
         
         private void SetLiczbaAtrybutowWKlasach()
         {
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             float liczbaWykryc = 0.0f;
-            foreach (var item in podmiot1.LiczbaAtrybutowWKlasach)
+            foreach (var item in podmiotNadrzedny.LiczbaAtrybutowWKlasach)
             {
                 ServiceReference1.atrybutyPlikow itemDoUsuniecia = null;
-                foreach (var item2 in podmiot2.LiczbaAtrybutowWKlasach)
+                foreach (var item2 in podmiotPodrzedny.LiczbaAtrybutowWKlasach)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
                     {
@@ -241,7 +249,7 @@ namespace SoftAnalyzerClient
                         break;
                     }
                 }
-                podmiot2.LiczbaAtrybutowWKlasach.Remove(itemDoUsuniecia);
+                podmiotPodrzedny.LiczbaAtrybutowWKlasach.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("LiczbaAtrybutowWKlasach", (float)liczbaWykryc / (float)podmiot1.LiczbaAtrybutowWKlasach.Count);
@@ -264,9 +272,9 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ZbiorBibliotekProperty)
+            foreach (var item in podmiotNadrzedny.ZbiorBibliotekProperty)
             {
-                foreach (var item2 in podmiot2.ZbiorBibliotekProperty)
+                foreach (var item2 in podmiotPodrzedny.ZbiorBibliotekProperty)
                 {
                     if (item.Equals(item2))
                     {
@@ -277,9 +285,9 @@ namespace SoftAnalyzerClient
                 }
             }
 
-            if((podmiot1.ZbiorBibliotekProperty.Count + podmiot2.ZbiorBibliotekProperty.Count) >= 0)
+            if((podmiotNadrzedny.ZbiorBibliotekProperty.Count + podmiotPodrzedny.ZbiorBibliotekProperty.Count) >= 0)
             {
-                SetPodobienstwo("ZbiorBibliotekProperty", (float)liczbaWykryc / (float)(podmiot1.ZbiorBibliotekProperty.Count + podmiot2.ZbiorBibliotekProperty.Count));
+                SetPodobienstwo("ZbiorBibliotekProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ZbiorBibliotekProperty.Count + podmiotPodrzedny.ZbiorBibliotekProperty.Count));
             }
             else
             {
@@ -292,19 +300,19 @@ namespace SoftAnalyzerClient
         private void SetLiczbaPlikowProperty()
         {
             //SetPodobienstwo("LiczbaPlikowProperty", (podmiot1.LiczbaPlikowProperty.Equals(podmiot2.LiczbaPlikowProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaPlikowProperty", PodobienstwoXtoX(podmiot1.LiczbaPlikowProperty, podmiot2.LiczbaPlikowProperty));
+            SetPodobienstwo("LiczbaPlikowProperty", PodobienstwoXtoX(podmiotNadrzedny.LiczbaPlikowProperty, podmiotPodrzedny.LiczbaPlikowProperty));
 
-            Tabela3x2("LiczbaPlikowProperty", "Liczba plików", podmiot1.LiczbaAtrybutowProperty.ToString(), podmiot2.LiczbaAtrybutowProperty.ToString());
+            Tabela3x2("LiczbaPlikowProperty", "Liczba plików", podmiotNadrzedny.LiczbaPlikowProperty.ToString(), podmiotPodrzedny.LiczbaPlikowProperty.ToString());
         }
 
         private void SetLiczbaLiniiKoduProperty()
         {
             float liczbaWykryc = 0.0f;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.LiczbaLiniiKoduProperty)
+            foreach (var item in podmiotNadrzedny.LiczbaLiniiKoduProperty)
             {
                 ServiceReference1.liczbaLiniiKodu itemDoUsuniecia = null;
-                foreach (var item2 in podmiot2.LiczbaLiniiKoduProperty)
+                foreach (var item2 in podmiotPodrzedny.LiczbaLiniiKoduProperty)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
                     {
@@ -315,7 +323,7 @@ namespace SoftAnalyzerClient
                         break;
                     }
                 }
-                podmiot2.LiczbaLiniiKoduProperty.Remove(itemDoUsuniecia);
+                podmiotPodrzedny.LiczbaLiniiKoduProperty.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("LiczbaLiniiKoduProperty", (float)liczbaWykryc / (float)podmiot1.LiczbaLiniiKoduProperty.Count);
@@ -338,10 +346,10 @@ namespace SoftAnalyzerClient
         {
             float liczbaWykryc = 0.0f;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.RozmiaryPlikowKodowZrodlowychProperty)
+            foreach (var item in podmiotNadrzedny.RozmiaryPlikowKodowZrodlowychProperty)
             {
                 ServiceReference1.rozmiaryPlikow itemDoUsuniecia = null;
-                foreach (var item2 in podmiot2.RozmiaryPlikowKodowZrodlowychProperty)
+                foreach (var item2 in podmiotPodrzedny.RozmiaryPlikowKodowZrodlowychProperty)
                 {
                     if (item.nazwa.Equals(item2.nazwa))
                     {
@@ -354,7 +362,7 @@ namespace SoftAnalyzerClient
 
                     }
                 }
-                podmiot2.RozmiaryPlikowKodowZrodlowychProperty.Remove(itemDoUsuniecia);
+                podmiotPodrzedny.RozmiaryPlikowKodowZrodlowychProperty.Remove(itemDoUsuniecia);
             }
             Console.WriteLine("liczba wykryć: " + liczbaWykryc + " wykryte: " + wykryte.Count);
             //SetPodobienstwo("RozmiaryPlikowKodowZrodlowychProperty", (float)liczbaWykryc / (float)podmiot1.RozmiaryPlikowKodowZrodlowychProperty.Count);
@@ -367,32 +375,32 @@ namespace SoftAnalyzerClient
 
         private void SetJezykProgramowaniaProperty()
         {
-            SetPodobienstwo("JezykProgramowaniaProperty", podmiot1.JezykProgramowaniaProperty.Equals(podmiot2.JezykProgramowaniaProperty) ? 1.0f : 0.0f);
-            Tabela3x2("JezykProgramowaniaProperty","Język programowania", podmiot1.JezykProgramowaniaProperty, podmiot2.JezykProgramowaniaProperty);
+            SetPodobienstwo("JezykProgramowaniaProperty", podmiotNadrzedny.JezykProgramowaniaProperty.Equals(podmiotPodrzedny.JezykProgramowaniaProperty) ? 1.0f : 0.0f);
+            Tabela3x2("JezykProgramowaniaProperty","Język programowania", podmiotNadrzedny.JezykProgramowaniaProperty, podmiotPodrzedny.JezykProgramowaniaProperty);
         }
 
         private void SetLiczbaZnakowProperty()
         {
             //SetPodobienstwo("LiczbaZnakowProperty", podmiot1.LiczbaZnakowProperty.Equals(podmiot2.LiczbaZnakowProperty) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaZnakowProperty", PodobienstwoXtoX(podmiot1.LiczbaZnakowProperty, podmiot2.LiczbaZnakowProperty));
-            Tabela3x2("LiczbaZnakowProperty","Liczba znaków", podmiot1.LiczbaZnakowProperty.ToString(), podmiot2.LiczbaZnakowProperty.ToString());
+            SetPodobienstwo("LiczbaZnakowProperty", PodobienstwoXtoX(podmiotNadrzedny.LiczbaZnakowProperty, podmiotPodrzedny.LiczbaZnakowProperty));
+            Tabela3x2("LiczbaZnakowProperty","Liczba znaków", podmiotNadrzedny.LiczbaZnakowProperty.ToString(), podmiotPodrzedny.LiczbaZnakowProperty.ToString());
         }
 
         private void SetListaNazwPlikowProperty()
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ListaNazwPlikow)
+            foreach (var item in podmiotNadrzedny.ListaNazwPlikow)
             {
-                if (podmiot2.ListaNazwPlikow.Contains(item))
+                if (podmiotPodrzedny.ListaNazwPlikow.Contains(item))
                 {
-                    podmiot2.ListaNazwPlikow.Remove(item);
+                    podmiotPodrzedny.ListaNazwPlikow.Remove(item);
                     liczbaWykryc++;
                     wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
                 }
             }
             //SetPodobienstwo("ListaNazwPlikowProperty", (float)liczbaWykryc / (float)podmiot1.ListaNazwPlikow.Count);
-            SetPodobienstwo("ListaNazwPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.ListaNazwPlikow.Count + podmiot2.ListaNazwPlikow.Count));
+            SetPodobienstwo("ListaNazwPlikowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ListaNazwPlikow.Count + podmiotPodrzedny.ListaNazwPlikow.Count));
             Tabela1xM("ListaNazwPlikowProperty","Wykryte pliki", wykryte);
         }
 
@@ -400,17 +408,17 @@ namespace SoftAnalyzerClient
         {
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
-            foreach (var item in podmiot1.ListaNazwKatalogow)
+            foreach (var item in podmiotNadrzedny.ListaNazwKatalogow)
             {
-                if (podmiot2.ListaNazwKatalogow.Contains(item))
+                if (podmiotPodrzedny.ListaNazwKatalogow.Contains(item))
                 {
-                    podmiot2.ListaNazwKatalogow.Remove(item);
+                    podmiotPodrzedny.ListaNazwKatalogow.Remove(item);
                     liczbaWykryc++;
                     wykryte.Add(new SzczegolowaTabela() { wartosc1 = item });
                 }
             }
             //SetPodobienstwo("ListaNazwKatalogowProperty", (float)liczbaWykryc / (float)podmiot1.ListaNazwKatalogow.Count);
-            SetPodobienstwo("ListaNazwKatalogowProperty", (float)liczbaWykryc / (float)(podmiot1.ListaNazwKatalogow.Count + podmiot2.ListaNazwKatalogow.Count));
+            SetPodobienstwo("ListaNazwKatalogowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.ListaNazwKatalogow.Count + podmiotPodrzedny.ListaNazwKatalogow.Count));
             Tabela1xM("ListaNazwKatalogowProperty", "Wykryte katalogi", wykryte);
         }
 
@@ -420,9 +428,9 @@ namespace SoftAnalyzerClient
         {
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             int liczbaWykryc = 0;
-            foreach (var item in podmiot1.LiczbaPlikowODanymRozszerzeniuProperty)
+            foreach (var item in podmiotNadrzedny.LiczbaPlikowODanymRozszerzeniuProperty)
             {
-                foreach (var item2 in podmiot2.LiczbaPlikowODanymRozszerzeniuProperty)
+                foreach (var item2 in podmiotPodrzedny.LiczbaPlikowODanymRozszerzeniuProperty)
                 {
                     if (item.rozszerzenie.Equals(item2.rozszerzenie) && item.liczba.Equals(item2.liczba))
                     {
@@ -434,7 +442,7 @@ namespace SoftAnalyzerClient
             }
 
             //SetPodobienstwo("LiczbaPlikowODanymRozszerzeniuProperty", liczbaWykryc / podmiot1.LiczbaPlikowODanymRozszerzeniuProperty.Count);
-            SetPodobienstwo("LiczbaPlikowODanymRozszerzeniuProperty", (float)liczbaWykryc / (float)(podmiot1.LiczbaPlikowODanymRozszerzeniuProperty.Count + podmiot2.LiczbaPlikowODanymRozszerzeniuProperty.Count));
+            SetPodobienstwo("LiczbaPlikowODanymRozszerzeniuProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.LiczbaPlikowODanymRozszerzeniuProperty.Count + podmiotPodrzedny.LiczbaPlikowODanymRozszerzeniuProperty.Count));
             Tabela2xM("LiczbaPlikowODanymRozszerzeniuProperty","Rozszerzenie pliku","Liczba plików",wykryte);
         }
 
@@ -442,9 +450,9 @@ namespace SoftAnalyzerClient
         {
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             float liczbaWykryc = 0.0f;
-            foreach (var item in podmiot1.LiczbaPlikowDanegoTypuProperty)
+            foreach (var item in podmiotNadrzedny.LiczbaPlikowDanegoTypuProperty)
             {
-                foreach (var item2 in podmiot2.LiczbaPlikowDanegoTypuProperty)
+                foreach (var item2 in podmiotPodrzedny.LiczbaPlikowDanegoTypuProperty)
                 {
                     if (item.typ.Equals(item2.typ))
                     {
@@ -459,37 +467,37 @@ namespace SoftAnalyzerClient
 
             //SetPodobienstwo("LiczbaPlikowDanegoTypuProperty", (float)liczbaWykryc / podmiot1.LiczbaPlikowDanegoTypuProperty.Count);
             //SetPodobienstwo("LiczbaPlikowDanegoTypuProperty", (float)liczbaWykryc / (float)(podmiot1.LiczbaPlikowDanegoTypuProperty.Count + podmiot2.LiczbaPlikowDanegoTypuProperty.Count));
-            SetPodobienstwo("LiczbaPlikowDanegoTypuProperty", liczbaWykryc / (float)podmiot1.LiczbaPlikowDanegoTypuProperty.Count);
+            SetPodobienstwo("LiczbaPlikowDanegoTypuProperty", liczbaWykryc / (float)podmiotNadrzedny.LiczbaPlikowDanegoTypuProperty.Count);
             //Tabela2xM("LiczbaPlikowDanegoTypuProperty", "Typ pliku", "Liczba plików", wykryte);
             Tabela3xM("LiczbaPlikowDanegoTypuProperty","Typ pliku", wykryte);
         }
 
         private void SetMozliwoscWczytywaniaPlikowProperty()
         {
-            SetPodobienstwo("MozliwoscWczytywaniaPlikowProperty", podmiot1.MozliwoscWczytywaniaPlikowProperty.Equals(podmiot2.MozliwoscWczytywaniaPlikowProperty) ? 1.0f : 0.0f);
-            Tabela3x2("MozliwoscWczytywaniaPlikowProperty","Czy system wczytuje pliki", podmiot1.MozliwoscWczytywaniaPlikowProperty ? "TAK" : "NIE", podmiot2.MozliwoscWczytywaniaPlikowProperty ? "TAK" : "NIE");
+            SetPodobienstwo("MozliwoscWczytywaniaPlikowProperty", podmiotNadrzedny.MozliwoscWczytywaniaPlikowProperty.Equals(podmiotPodrzedny.MozliwoscWczytywaniaPlikowProperty) ? 1.0f : 0.0f);
+            Tabela3x2("MozliwoscWczytywaniaPlikowProperty","Czy system wczytuje pliki", podmiotNadrzedny.MozliwoscWczytywaniaPlikowProperty ? "TAK" : "NIE", podmiotPodrzedny.MozliwoscWczytywaniaPlikowProperty ? "TAK" : "NIE");
         }
 
         private void SetLiczbaDanychWejsciowychProperty()
         {
             //SetPodobienstwo("LiczbaDanychWejsciowychProperty", (podmiot1.LiczbaDanychWejsciowychProperty.Equals(podmiot2.LiczbaDanychWejsciowychProperty)) ? 1.0f : 0.0f);
-            SetPodobienstwo("LiczbaDanychWejsciowychProperty", PodobienstwoXtoX(podmiot1.LiczbaDanychWejsciowychProperty, podmiot2.LiczbaDanychWejsciowychProperty));
-            Tabela3x2("LiczbaDanychWejsciowychProperty","Liczba użytych mechanizmów wczytujących dane", podmiot1.LiczbaDanychWejsciowychProperty.ToString(), podmiot2.LiczbaDanychWejsciowychProperty.ToString());
+            SetPodobienstwo("LiczbaDanychWejsciowychProperty", PodobienstwoXtoX(podmiotNadrzedny.LiczbaDanychWejsciowychProperty, podmiotPodrzedny.LiczbaDanychWejsciowychProperty));
+            Tabela3x2("LiczbaDanychWejsciowychProperty","Liczba użytych mechanizmów wczytujących dane", podmiotNadrzedny.LiczbaDanychWejsciowychProperty.ToString(), podmiotPodrzedny.LiczbaDanychWejsciowychProperty.ToString());
         }
 
         private void SetJezykInterfejsuProperty()
         {
-            SetPodobienstwo("JezykInterfejsuProperty", podmiot1.JezykInterfejsuProperty.Equals(podmiot2.JezykInterfejsuProperty) ? 1.0f : 0.0f);
-            Tabela3x2("JezykInterfejsuProperty","Lokalizacja systemu (język)", podmiot1.JezykInterfejsuProperty, podmiot2.JezykInterfejsuProperty);
+            SetPodobienstwo("JezykInterfejsuProperty", podmiotNadrzedny.JezykInterfejsuProperty.Equals(podmiotPodrzedny.JezykInterfejsuProperty) ? 1.0f : 0.0f);
+            Tabela3x2("JezykInterfejsuProperty","Lokalizacja systemu (język)", podmiotNadrzedny.JezykInterfejsuProperty, podmiotPodrzedny.JezykInterfejsuProperty);
         }
 
         private void SetLiczbaZmiennychDanegoTypuProperty()
         {
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
             float liczbaWykryc = 0.0f;
-            foreach (var item in podmiot1.LiczbaZmiennychDanegoTypuProperty)
+            foreach (var item in podmiotNadrzedny.LiczbaZmiennychDanegoTypuProperty)
             {
-                foreach (var item2 in podmiot2.LiczbaZmiennychDanegoTypuProperty)
+                foreach (var item2 in podmiotPodrzedny.LiczbaZmiennychDanegoTypuProperty)
                 {
                     if (item.typ.Equals(item2.typ))
                     {
@@ -515,12 +523,12 @@ namespace SoftAnalyzerClient
             int liczbaWykryc = 0;
             List<SzczegolowaTabela> wykryte = new List<SzczegolowaTabela>();
 
-            int liczbaSkrotow = podmiot2.SkrotyPlikowProperty.Count;
+            int liczbaSkrotow = podmiotPodrzedny.SkrotyPlikowProperty.Count;
 
-            foreach (var item in podmiot1.SkrotyPlikowProperty)
+            foreach (var item in podmiotNadrzedny.SkrotyPlikowProperty)
             {
                 ServiceReference1.hashePlikow itemDoUsuniecia = null;
-                foreach (var item2 in podmiot2.SkrotyPlikowProperty)
+                foreach (var item2 in podmiotPodrzedny.SkrotyPlikowProperty)
                 {
                     if (item.hash.Equals(item2.hash))
                     {
@@ -530,26 +538,26 @@ namespace SoftAnalyzerClient
                         break;
                     }
                 }
-                podmiot2.SkrotyPlikowProperty.Remove(itemDoUsuniecia);
+                podmiotPodrzedny.SkrotyPlikowProperty.Remove(itemDoUsuniecia);
             }
 
             //SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)podmiot1.SkrotyPlikowProperty.Count);
 
             //Console.WriteLine("liczba wykryc " + liczbaWykryc + " count1 " + podmiot1.SkrotyPlikowProperty.Count + " count2 " + liczbaSkrotow);
-            SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)(podmiot1.SkrotyPlikowProperty.Count + liczbaSkrotow));
+            SetPodobienstwo("SkrotyPlikowProperty", (float)liczbaWykryc / (float)(podmiotNadrzedny.SkrotyPlikowProperty.Count + liczbaSkrotow));
             Tabela1xM("SkrotyPlikowProperty","Identyczne pliki", wykryte);
         }
 
         private void SetParadygmatProperty()
         {
-            SetPodobienstwo("ParadygmatProperty", podmiot1.ParadygmatProperty.Equals(podmiot2.ParadygmatProperty) ? 1.0f : 0.0f);
-            Tabela3x2("ParadygmatProperty","Paradygmat", podmiot1.ParadygmatProperty, podmiot2.ParadygmatProperty);
+            SetPodobienstwo("ParadygmatProperty", podmiotNadrzedny.ParadygmatProperty.Equals(podmiotPodrzedny.ParadygmatProperty) ? 1.0f : 0.0f);
+            Tabela3x2("ParadygmatProperty","Paradygmat", podmiotNadrzedny.ParadygmatProperty, podmiotPodrzedny.ParadygmatProperty);
         }
 
         private void SetMechanizmWielowatkowosciPropertyy()
         {
-            SetPodobienstwo("MechanizmWielowatkowosciProperty", podmiot1.MechanizmWielowatkowosciProperty.Equals(podmiot2.MechanizmWielowatkowosciProperty) ? 1.0f : 0.0f);
-            Tabela3x2("MechanizmWielowatkowosciProperty","Czy występuje wielowątkowość", podmiot1.MechanizmWielowatkowosciProperty ? "TAK" : "NIE", podmiot2.MechanizmWielowatkowosciProperty ? "TAK" : "NIE");
+            SetPodobienstwo("MechanizmWielowatkowosciProperty", podmiotNadrzedny.MechanizmWielowatkowosciProperty.Equals(podmiotPodrzedny.MechanizmWielowatkowosciProperty) ? 1.0f : 0.0f);
+            Tabela3x2("MechanizmWielowatkowosciProperty","Czy występuje wielowątkowość", podmiotNadrzedny.MechanizmWielowatkowosciProperty ? "TAK" : "NIE", podmiotPodrzedny.MechanizmWielowatkowosciProperty ? "TAK" : "NIE");
         }
 
         private void Tabela3x2(string nazwaProperty, string etykieta, string wartosc1, string wartosc2)
@@ -564,10 +572,10 @@ namespace SoftAnalyzerClient
                 col1.Header = "";
                 col1.Binding = new Binding("nazwa");
                 dg.Columns.Add(col1);
-                col2.Header = podmiot1.NazwaPodmiotu;
+                col2.Header = podmiotNadrzedny.NazwaPodmiotu;
                 col2.Binding = new Binding("wartosc1");
                 dg.Columns.Add(col2);
-                col3.Header = podmiot2.NazwaPodmiotu;
+                col3.Header = podmiotPodrzedny.NazwaPodmiotu;
                 col3.Binding = new Binding("wartosc2");
                 dg.Columns.Add(col3);
 
@@ -588,10 +596,10 @@ namespace SoftAnalyzerClient
                 col1.Header = etykieta;
                 col1.Binding = new Binding("nazwa");
                 dg.Columns.Add(col1);
-                col2.Header = podmiot1.NazwaPodmiotu;
+                col2.Header = podmiotNadrzedny.NazwaPodmiotu;
                 col2.Binding = new Binding("wartosc1");
                 dg.Columns.Add(col2);
-                col3.Header = podmiot2.NazwaPodmiotu;
+                col3.Header = podmiotPodrzedny.NazwaPodmiotu;
                 col3.Binding = new Binding("wartosc2");
                 dg.Columns.Add(col3);
 
